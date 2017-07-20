@@ -1,3 +1,4 @@
+
 local lsc = {
 	inside = false,
 	title = "Los Santos Customs",
@@ -6,7 +7,7 @@ local lsc = {
 	currentpos = nil,
 	currentgarage = 0,
 	selectedbutton = 0,
-	locations = {
+	locations = { 
 		[1] = { locked = false, outside = { x = -362.7962, y = -132.4005, z = 38.25239, heading = 71.187133}, inside = {x = -337.3863,y = -136.9247,z = 38.5737, heading = 269.455}},
 		[2] = { locked = false, outside = { x = -1140.191, y = -1985.478, z = 12.72923, heading = 315.290466}, inside = {x = -1155.536,y = -2007.183,z = 12.744, heading = 155.413}},
 		[3] = { locked = false, outside = { x = 716.4645, y = -1088.869, z = 21.92979, heading = 88.768}, inside = {x = 731.8163,y = -1088.822,z = 21.733, heading = 269.318}},
@@ -20,106 +21,106 @@ local lsc = {
 		buttons = 10,
 		from = 1,
 		to = 10,
-		["bumpers"] = {
-			title = "bumpers",
+		["bumpers"] = { 
+			title = "bumpers", 
 			name = "bumpers",
-			buttons = {
+			buttons = { 
 
 			}
 		},
-		["frontbumper"] = {
-			title = "frontbumper",
+		["frontbumper"] = { 
+			title = "frontbumper", 
 			name = "frontbumper",
-			buttons = {
+			buttons = { 
 
 			}
 		},
-		["rearbumper"] = {
-			title = "rearbumper",
+		["rearbumper"] = { 
+			title = "rearbumper", 
 			name = "rearbumper",
-			buttons = {
+			buttons = { 
 
 			}
 		},
-		["main"] = {
-			title = "categories",
+		["main"] = { 
+			title = "categories", 
 			name = "main",
-			buttons = {
-
+			buttons = { 
+				
 			}
-		},["exhaust"] = {
-			title = "exhaust",
+		},["exhaust"] = { 
+			title = "exhaust", 
 			name = "exhaust",
-			buttons = {
-
+			buttons = { 
+				
 			}
 		},
-		["fenders"] = {
-			title = "fenders",
+		["fenders"] = { 
+			title = "fenders", 
 			name = "fenders",
-			buttons = {
-
+			buttons = { 
+				
 			}
 		},
-		["grille"] = {
-			title = "grille",
+		["grille"] = { 
+			title = "grille", 
 			name = "grille",
-			buttons = {
-
+			buttons = { 
+				
 			}
 		},
-		["hood"] = {
-			title = "hood",
+		["hood"] = { 
+			title = "hood", 
 			name = "hood",
-			buttons = {
-
+			buttons = { 
+				
 			}
-		},["rollcage"] = {
-			title = "rollcage",
+		},["rollcage"] = { 
+			title = "rollcage", 
 			name = "rollcage",
-			buttons = {
-
+			buttons = { 
+				
 			}
 		},
-		["roof"] = {
-			title = "roof",
+		["roof"] = { 
+			title = "roof", 
 			name = "roof",
-			buttons = {
-
+			buttons = { 
+				
 			}
 		},
-		["skirts"] = {
-			title = "skirts",
+		["skirts"] = { 
+			title = "skirts", 
 			name = "skirts",
-			buttons = {
-
+			buttons = { 
+				
 			}
 		}
 		,
-		["spoiler"] = {
-			title = "spoiler",
+		["spoiler"] = { 
+			title = "spoiler", 
 			name = "spoiler",
-			buttons = {
-
+			buttons = { 
+				
 			}
-		},["wheeliebar"] = {
-			title = "wheeliebar",
+		},["wheeliebar"] = { 
+			title = "wheeliebar", 
 			name = "wheeliebar",
-			buttons = {
-
+			buttons = { 
+				
 			}
 		},
-		["chassis"] = {
-			title = "chassis",
+		["chassis"] = { 
+			title = "chassis", 
 			name = "chassis",
-			buttons = {
-
+			buttons = { 
+				
 			}
 		}
-	,["primarymetallic"] = {
-			title = "primary colors",
+	,["primarymetallic"] = { 
+			title = "primary colors", 
 			name = "primarymetallic",
-			buttons = {			-- COSTS BELOW CAN BE EDITED TO REFLECT A COST TO BE SUBTRACTED
+			buttons = { 
 				{name = "Black",costs = 0, colorindex = 0, description = "", centre = 0, font = 0, scale = 0.4},
 				{name = "Carbon Black",costs = 0, colorindex = 147, description = "", centre = 0, font = 0, scale = 0.4},
 				{name = "Hraphite",costs = 0, colorindex = 1, description = "", centre = 0, font = 0, scale = 0.4},
@@ -197,10 +198,10 @@ local lsc = {
 				{name = "Frost White",costs = 0, colorindex = 112, description = "", centre = 0, font = 0, scale = 0.4}
 			}
 		},
-		["secondarymetallic"] = {
-			title = "secondary colors",
+		["secondarymetallic"] = { 
+			title = "secondary colors", 
 			name = "secondarymetallic",
-			buttons = {
+			buttons = { 
 				{name = "Black",costs = 0, colorindex = 0, description = "", centre = 0, font = 0, scale = 0.4},
 				{name = "Carbon Black",costs = 0, colorindex = 147, description = "", centre = 0, font = 0, scale = 0.4},
 				{name = "Hraphite",costs = 0, colorindex = 1, description = "", centre = 0, font = 0, scale = 0.4},
@@ -279,10 +280,10 @@ local lsc = {
 			}
 		},
 
-		["primarymatte"] = {
-				title = "primary colors",
+		["primarymatte"] = { 
+				title = "primary colors", 
 				name = "primarymatte",
-				buttons = {
+				buttons = { 
 					{name = "Black", colorindex = 12,costs = 0, description = "", centre = 0, font = 0, scale = 0.4},
 					{name = "Gray", colorindex = 13,costs = 0, description = "", centre = 0, font = 0, scale = 0.4},
 					{name = "Light Gray", colorindex = 14,costs = 0, description = "", centre = 0, font = 0, scale = 0.4},
@@ -305,10 +306,10 @@ local lsc = {
 					{name = "Desert Tan", colorindex = 154,costs = 0, description = "", centre = 0, font = 0, scale = 0.4}
 				}
 			},
-			["secondarymatte"] = {
-				title = "secondary colors",
+			["secondarymatte"] = { 
+				title = "secondary colors", 
 				name = "secondarymatte",
-				buttons = {
+				buttons = { 
 					{name = "Black", colorindex = 12,costs = 0, description = "", centre = 0, font = 0, scale = 0.4},
 					{name = "Gray", colorindex = 13,costs = 0, description = "", centre = 0, font = 0, scale = 0.4},
 					{name = "Light Gray", colorindex = 14,costs = 0, description = "", centre = 0, font = 0, scale = 0.4},
@@ -331,10 +332,10 @@ local lsc = {
 					{name = "Desert Tan", colorindex = 154,costs = 0, description = "", centre = 0, font = 0, scale = 0.4}
 				}
 			},
-			["primarymetal"] = {
-				title = "primary colors",
+			["primarymetal"] = { 
+				title = "primary colors", 
 				name = "primarymetal",
-				buttons = {
+				buttons = { 
 					{name = "Brushed Steel",colorindex = 117,costs = 0, description = "", centre = 0, font = 0, scale = 0.4},
 					{name = "Brushed Black Steel",colorindex = 118,costs = 0, description = "", centre = 0, font = 0, scale = 0.4},
 					{name = "Brushed Aluminum",colorindex = 119,costs = 0, description = "", centre = 0, font = 0, scale = 0.4},
@@ -343,20 +344,20 @@ local lsc = {
 				}
 			}
 			,
-			["secondarymetal"] = {
-				title = "secondary colors",
+			["secondarymetal"] = { 
+				title = "secondary colors", 
 				name = "secondarymetal",
-				buttons = {
+				buttons = { 
 					{name = "Brushed Steel",colorindex = 117,costs = 0, description = "", centre = 0, font = 0, scale = 0.4},
 					{name = "Brushed Black Steel",colorindex = 118,costs = 0, description = "", centre = 0, font = 0, scale = 0.4},
 					{name = "Brushed Aluminum",colorindex = 119,costs = 0, description = "", centre = 0, font = 0, scale = 0.4},
 					{name = "Pure Gold",colorindex = 158,costs = 0, description = "", centre = 0, font = 0, scale = 0.4},
 					{name = "Brushed Gold",colorindex = 159,costs = 0, description = "", centre = 0, font = 0, scale = 0.4}
 				}
-			},["wheelcolor"] = {
-			title = "wheel colors",
+			},["wheelcolor"] = { 
+			title = "wheel colors", 
 			name = "wheelcolor",
-			buttons = {
+			buttons = { 
 				{name = "Black",costs = 0, colorindex = 0, description = "", centre = 0, font = 0, scale = 0.4},
 				{name = "Carbon Black",costs = 0, colorindex = 147, description = "", centre = 0, font = 0, scale = 0.4},
 				{name = "Hraphite",costs = 0, colorindex = 1, description = "", centre = 0, font = 0, scale = 0.4},
@@ -434,10 +435,10 @@ local lsc = {
 				{name = "Frost White",costs = 0, colorindex = 112, description = "", centre = 0, font = 0, scale = 0.4}
 			}
 		},
-		["windows"] = {
-			title = "windows",
+		["windows"] = { 
+			title = "windows", 
 			name = "windows",
-			buttons = {
+			buttons = { 
 				{name = "None",tint = false, costs = 0, description = "", centre = 0, font = 0, scale = 0.4},
 				{name = "Pure Black",tint = 1, costs = 0, description = "", centre = 0, font = 0, scale = 0.4},
 				{name = "Darksmoke",tint = 2, costs = 0, description = "", centre = 0, font = 0, scale = 0.4},
@@ -446,10 +447,10 @@ local lsc = {
 				{name = "Green",tint = 5, costs = 0, description = "", centre = 0, font = 0, scale = 0.4}
 			}
 		},
-		["wheelaccessories"] = {
-			title = "wheel accessories",
+		["wheelaccessories"] = { 
+			title = "wheel accessories", 
 			name = "wheelaccessories",
-			buttons = {
+			buttons = { 
 				{name = "Stock Tires", costs = 0, description = "", centre = 0, font = 0, scale = 0.4},
 				{name = "Custom Tires", costs = 0, description = "", centre = 0, font = 0, scale = 0.4},
 				{name = "Bulletproof Tires", costs = 0, description = "", centre = 0, font = 0, scale = 0.4},
@@ -465,18 +466,18 @@ local lsc = {
 				{name = "Gray Tire Smoke", color = {128,128,128}, costs = 0, description = "", centre = 0, font = 0, scale = 0.4},
 			}
 		},
-		["respray"] = {
-			title = "resprays",
+		["respray"] = { 
+			title = "resprays", 
 			name = "respray",
-			buttons = {
+			buttons = { 
 				{name = "Primary Color", description = "", centre = 0, font = 0, scale = 0.4},
 				{name = "Secondary Color", description = "", centre = 0, font = 0, scale = 0.4}
 			}
 		},
-		["primarycolor"] = {
-			title = "color groups",
+		["primarycolor"] = { 
+			title = "color groups", 
 			name = "primarycolor",
-			buttons = {
+			buttons = { 
 				{name = "Chrome", description = "", centre = 0, font = 0, scale = 0.4},
 				{name = "Classic", description = "", centre = 0, font = 0, scale = 0.4},
 				{name = "Matte", description = "", centre = 0, font = 0, scale = 0.4},
@@ -485,10 +486,10 @@ local lsc = {
 			}
 		}
 		,
-		["secondarycolor"] = {
-			title = "color groups",
+		["secondarycolor"] = { 
+			title = "color groups", 
 			name = "secondarycolor",
-			buttons = {
+			buttons = { 
 				{name = "Chrome", description = "", centre = 0, font = 0, scale = 0.4},
 				{name = "Classic", description = "", centre = 0, font = 0, scale = 0.4},
 				{name = "Matte", description = "", centre = 0, font = 0, scale = 0.4},
@@ -496,25 +497,25 @@ local lsc = {
 				{name = "Metals", description = "", centre = 0, font = 0, scale = 0.4}
 			}
 		},
-		["primarychrome"] = {
-			title = "primary colors",
+		["primarychrome"] = { 
+			title = "primary colors", 
 			name = "primarycolchrome",
-			buttons = {
+			buttons = { 
 				{name = "Chrome", colorindex = 120, description = "", centre = 0, font = 0, scale = 0.4}
 			}
 		},
-		["secondarychrome"] = {
-			title = "secondary colors",
+		["secondarychrome"] = { 
+			title = "secondary colors", 
 			name = "secondarycolchrome",
-			buttons = {
+			buttons = { 
 				{name = "Chrome", colorindex = 120, description = "", centre = 0, font = 0, scale = 0.4}
 			}
 		},
 
-		["primaryclassic"] = {
-			title = "primary colors",
+		["primaryclassic"] = { 
+			title = "primary colors", 
 			name = "primaryclassic",
-			buttons = {
+			buttons = { 
 				{name = "Black",costs = 0, colorindex = 0, description = "", centre = 0, font = 0, scale = 0.4},
 				{name = "Carbon Black",costs = 0, colorindex = 147, description = "", centre = 0, font = 0, scale = 0.4},
 				{name = "Hraphite",costs = 0, colorindex = 1, description = "", centre = 0, font = 0, scale = 0.4},
@@ -592,10 +593,10 @@ local lsc = {
 				{name = "Frost White",costs = 0, colorindex = 112, description = "", centre = 0, font = 0, scale = 0.4}
 			}
 		},
-		["secondaryclassic"] = {
-			title = "secondary colors",
+		["secondaryclassic"] = { 
+			title = "secondary colors", 
 			name = "secondaryclassic",
-			buttons = {
+			buttons = { 
 				{name = "Black",costs = 0, colorindex = 0, description = "", centre = 0, font = 0, scale = 0.4},
 				{name = "Carbon Black",costs = 0, colorindex = 147, description = "", centre = 0, font = 0, scale = 0.4},
 				{name = "Hraphite",costs = 0, colorindex = 1, description = "", centre = 0, font = 0, scale = 0.4},
@@ -672,10 +673,10 @@ local lsc = {
 				{name = "Ice White",costs = 0, colorindex = 111, description = "", centre = 0, font = 0, scale = 0.4},
 				{name = "Frost White",costs = 0, colorindex = 112, description = "", centre = 0, font = 0, scale = 0.4}
 			}
-		},["suspension"] = {
-			title = "suspensions",
+		},["suspension"] = { 
+			title = "suspensions", 
 			name = "suspensions",
-			buttons = {
+			buttons = { 
 				{name = "Stock Suspension",mod = -1,modtype =15, costs = 0, description = "", centre = 0, font = 0, scale = 0.4},
 				{name = "Lowered Suspension",mod = false,modtype =15, costs = 0, description = "", centre = 0, font = 0, scale = 0.4},
 				{name = "Street Suspension",mod = 1,modtype =15, costs = 0, description = "", centre = 0, font = 0, scale = 0.4},
@@ -683,10 +684,10 @@ local lsc = {
 				{name = "Competition Suspension",mod = 3,modtype =15, costs = 0, description = "", centre = 0, font = 0, scale = 0.4}
 			}
 		},
-		["transmission"] = {
-			title = "transmissions",
+		["transmission"] = { 
+			title = "transmissions", 
 			name = "transmission",
-			buttons = {
+			buttons = { 
 				{name = "Stock Transmission",mod = -1,modtype =13, costs = 0, description = "", centre = 0, font = 0, scale = 0.4},
 				{name = "Street Transmission",mod = false,modtype =13, costs = 0, description = "", centre = 0, font = 0, scale = 0.4},
 				{name = "Sports Transmission",mod = 1,modtype =13, costs = 0, description = "", centre = 0, font = 0, scale = 0.4},
@@ -694,28 +695,28 @@ local lsc = {
 			}
 		}
 		,
-		["turbo"] = {
-			title = "turbo",
+		["turbo"] = { 
+			title = "turbo", 
 			name = "turbo",
-			buttons = {
+			buttons = { 
 				{name = "None",mod = false,modtype =18, costs = 0, description = "", centre = 0, font = 0, scale = 0.4},
 				{name = "Turbo Tuning",mod = true,modtype =18, costs = 0, description = "", centre = 0, font = 0, scale = 0.4}
 			}
 		},
-		["wheels"] = {
-			title = "wheels",
+		["wheels"] = { 
+			title = "wheels", 
 			name = "wheels",
-			buttons = {
+			buttons = { 
 				{name = "Wheel Type", description = "", centre = 0, font = 0, scale = 0.4},
 				{name = "Wheel Color", description = "", centre = 0, font = 0, scale = 0.4},
 				{name = "Wheel Accessories", description = "", centre = 0, font = 0, scale = 0.4}
 			}
 		},
-		["wheeltype"] = {
-			title = "wheel types",
+		["wheeltype"] = { 
+			title = "wheel types", 
 			name = "wheeltype",
-			buttons = {
-
+			buttons = { 
+				
 				{name = "Sport", wtype = false, description = "", centre = 0, font = 0, scale = 0.4},
 				{name = "Muscle", wtype = 1, description = "", centre = 0, font = 0, scale = 0.4},
 				{name = "Lowrider", wtype = 2, description = "", centre = 0, font = 0, scale = 0.4},
@@ -725,10 +726,10 @@ local lsc = {
 				{name = "Highend", wtype = 7, description = "", centre = 0, font = 0, scale = 0.4},
 			}
 		},
-		["sport"] = {
-			title = "sport",
+		["sport"] = { 
+			title = "sport", 
 			name = "sport",
-			buttons = {
+			buttons = { 
 				{name = "Stock", wtype = false, modtype = 23, mod = -1, costs = 0, description = "", centre = 0, font = 0, scale = 0.4},
 				{name = "Inferno", wtype = false, modtype = 23, mod = false, costs = 0, description = "", centre = 0, font = 0, scale = 0.4},
 				{name = "Deepfive", wtype = false, modtype = 23, mod = 1, costs = 0, description = "", centre = 0, font = 0, scale = 0.4},
@@ -756,10 +757,10 @@ local lsc = {
 				{name = "Slitsix", wtype = false, modtype = 23, mod = 23, costs = 0, description = "", centre = 0, font = 0, scale = 0.4},
 			}
 		},
-		["suv"] = {
-			title = "suv",
+		["suv"] = { 
+			title = "suv", 
 			name = "suv",
-			buttons = {
+			buttons = { 
 				{name = "Stock", wtype = 3, modtype = 23, mod = -1, costs = 0, description = "", centre = 0, font = 0, scale = 0.4},
 				{name = "Vip", wtype = 3, modtype = 23, mod = false, costs = 0, description = "", centre = 0, font = 0, scale = 0.4},
 				{name = "Benefactor", wtype = 3, modtype = 23, mod = 1, costs = 0, description = "", centre = 0, font = 0, scale = 0.4},
@@ -782,10 +783,10 @@ local lsc = {
 				{name = "Cutter", wtype = 3, modtype = 23, mod = 18, costs = 0, description = "", centre = 0, font = 0, scale = 0.4},
 			}
 		},
-		["offroad"] = {
-			title = "offroad",
+		["offroad"] = { 
+			title = "offroad", 
 			name = "offroad",
-			buttons = {
+			buttons = { 
 				{name = "Stock", wtype = 4, modtype = 23, mod = -1, costs = 0, description = "", centre = 0, font = 0, scale = 0.4},
 				{name = "Raider", wtype = 4, modtype = 23, mod = false, costs = 0, description = "", centre = 0, font = 0, scale = 0.4},
 				{name = "Mudslinger", modtype = 23, mod = 1, costs = 0, description = "", centre = 0, font = 0, scale = 0.4},
@@ -799,10 +800,10 @@ local lsc = {
 				{name = "Milspecsteelie", wtype = 4, modtype = 23, mod = 9, costs = 0, description = "", centre = 0, font = 0, scale = 0.4},
 			}
 		},
-		["tuner"] = {
-			title = "tuner",
+		["tuner"] = { 
+			title = "tuner", 
 			name = "tuner",
-			buttons = {
+			buttons = { 
 				{name = "Stock", wtype = 5, modtype = 23, mod = -1, costs = 0, description = "", centre = 0, font = 0, scale = 0.4},
 				{name = "Cosmo", wtype = 5, modtype = 23, mod = false, costs = 0, description = "", centre = 0, font = 0, scale = 0.4},
 				{name = "Supermesh", wtype = 5, modtype = 23, mod = 1, costs = 0, description = "", centre = 0, font = 0, scale = 0.4},
@@ -830,10 +831,10 @@ local lsc = {
 				{name = "Rallymaster", wtype = 5, modtype = 23, mod = 23, costs = 0, description = "", centre = 0, font = 0, scale = 0.4},
 			}
 		},
-		["highend"] = {
-			title = "highend",
+		["highend"] = { 
+			title = "highend", 
 			name = "highend",
-			buttons = {
+			buttons = { 
 				{name = "Stock", wtype = 7, modtype = 23, mod = -1, costs = 0, description = "", centre = 0, font = 0, scale = 0.4},
 				{name = "Shadow", wtype = 7, modtype = 23, mod = false, costs = 0, description = "", centre = 0, font = 0, scale = 0.4},
 				{name = "Hyper", wtype = 7, modtype = 23, mod = 1, costs = 0, description = "", centre = 0, font = 0, scale = 0.4},
@@ -857,10 +858,10 @@ local lsc = {
 				{name = "Carbonsracer", wtype = 7, modtype = 23, mod = 19, costs = 0, description = "", centre = 0, font = 0, scale = 0.4},
 			}
 		},
-		["lowrider"] = {
-			title = "lowrider",
+		["lowrider"] = { 
+			title = "lowrider", 
 			name = "lowrider",
-			buttons = {
+			buttons = { 
 				{name = "Stock", wtype = 2, modtype = 23, mod = -1, costs = 0, description = "", centre = 0, font = 0, scale = 0.4},
 				{name = "Flare", wtype = 2, modtype = 23, mod = false, costs = 0, description = "", centre = 0, font = 0, scale = 0.4},
 				{name = "Wired", wtype = 2, modtype = 23, mod = 1, costs = 0, description = "", centre = 0, font = 0, scale = 0.4},
@@ -879,10 +880,10 @@ local lsc = {
 				{name = "Gooch", wtype = 2, modtype = 23, mod = 14, costs = 0, description = "", centre = 0, font = 0, scale = 0.4},
 			}
 		},
-		["muscle"] = {
-			title = "muscle",
+		["muscle"] = { 
+			title = "muscle", 
 			name = "muscle",
-			buttons = {
+			buttons = { 
 				{name = "Stock", wtype = 1, modtype = 23, mod = -1, costs = 0, description = "", centre = 0, font = 0, scale = 0.4},
 				{name = "Classicfive", wtype = 1, modtype = 23, mod = false, costs = 0, description = "", centre = 0, font = 0, scale = 0.4},
 				{name = "Dukes", wtype = 1, modtype = 23, mod = 1, costs = 0, description = "", centre = 0, font = 0, scale = 0.4},
@@ -903,10 +904,10 @@ local lsc = {
 				{name = "Mercenary", wtype = 1, modtype = 23, mod = 16, costs = 0, description = "", centre = 0, font = 0, scale = 0.4},
 			}
 		},
-		["frontwheel"] = {
-			title = "front wheel",
+		["frontwheel"] = { 
+			title = "front wheel", 
 			name = "frontwheel",
-			buttons = {
+			buttons = { 
 				{name = "Stock", wtype = 6, modtype = 23, mod = -1, costs = 0, description = "", centre = 0, font = 0, scale = 0.4},
 				{name = "Speedway", wtype = 6, modtype = 23, mod = false, costs = 0, description = "", centre = 0, font = 0, scale = 0.4},
 				{name = "Streetspecial", wtype = 6, modtype = 23, mod = 1, costs = 0, description = "", centre = 0, font = 0, scale = 0.4},
@@ -923,10 +924,10 @@ local lsc = {
 				{name = "Loops", wtype = 6, modtype = 23, mod = 12, costs = 0, description = "", centre = 0, font = 0, scale = 0.4},
 			}
 		},
-		["backwheel"] = {
-			title = "back wheel",
+		["backwheel"] = { 
+			title = "back wheel", 
 			name = "backwheel",
-			buttons = {
+			buttons = { 
 				{name = "Stock", wtype = 6, modtype = 24, mod = -1, costs = 0, description = "", centre = 0, font = 0, scale = 0.4},
 				{name = "Speedway", wtype = 6, modtype = 24, mod = false, costs = 0, description = "", centre = 0, font = 0, scale = 0.4},
 				{name = "Streetspecial", wtype = 6, modtype = 24, mod = 1, costs = 0, description = "", centre = 0, font = 0, scale = 0.4},
@@ -942,34 +943,34 @@ local lsc = {
 				{name = "Iceshield", wtype = 6, modtype = 24, mod = 11, costs = 0, description = "", centre = 0, font = 0, scale = 0.4},
 				{name = "Loops", wtype = 6, modtype = 24, mod = 12, costs = 0, description = "", centre = 0, font = 0, scale = 0.4},
 			}
-		},["lights"] = {
-			title = "lights",
+		},["lights"] = { 
+			title = "lights", 
 			name = "lights",
-			buttons = {
+			buttons = { 
 				{name = "Headlights", description = "", centre = 0, font = 0, scale = 0.4},
 				{name = "Neon Kits", description = "", centre = 0, font = 0, scale = 0.4}
 			}
 		},
-		["neonkits"] = {
-			title = "neonkits",
+		["neonkits"] = { 
+			title = "neonkits", 
 			name = "neonkits",
-			buttons = {
+			buttons = { 
 				{name = "Neon Layout", description = "", centre = 0, font = 0, scale = 0.4},
 				{name = "Neon Color", description = "", centre = 0, font = 0, scale = 0.4}
 			}
 		},
-		["neonlayout"] = {
-			title = "neon layout",
+		["neonlayout"] = { 
+			title = "neon layout", 
 			name = "neonlayout",
-			buttons = {
+			buttons = { 
 				{name = "None",costs = 0, description = "", centre = 0, font = 0, scale = 0.4},
 				{name = "Front,Back and Sides",costs =0, description = "", centre = 0, font = 0, scale = 0.4}
 			}
 		},
-		["neoncolor"] = {
-			title = "neon color",
+		["neoncolor"] = { 
+			title = "neon color", 
 			name = "neoncolor",
-			buttons = {
+			buttons = { 
 				{name = "White", color = {255,255,255}, costs = 0, description = "", centre = 0, font = 0, scale = 0.4},
 				{name = "Blue", color = {0,0,255}, costs = 0, description = "", centre = 0, font = 0, scale = 0.4},
 				{name = "Electric Blue", color = {0,150,255}, costs = 0, description = "", centre = 0, font = 0, scale = 0.4},
@@ -984,70 +985,70 @@ local lsc = {
 				{name = "Purple", color = {153,0,153}, costs = 0, description = "", centre = 0, font = 0, scale = 0.4},
 			}
 		},
-		["headlights"] = {
-			title = "headlights",
+		["headlights"] = { 
+			title = "headlights", 
 			name = "headlights",
-			buttons = {
+			buttons = { 
 				{name = "Stock Lights",mod = false, modtype = 22,costs = 0, description = "", centre = 0, font = 0, scale = 0.4},
 				{name = "Xenon Lights",mod = true,modtype = 22,costs = 0, description = "", centre = 0, font = 0, scale = 0.4}
 			}
 		},
-		["plate"] = {
-			title = "plates",
+		["plate"] = { 
+			title = "plates", 
 			name = "plate",
-			buttons = {
+			buttons = { 
 				{name = "Blue on White 1",plateindex = false,costs = 0, description = "", centre = 0, font = 0, scale = 0.4},
 				{name = "Blue on White 2",plateindex = 3,costs = 0, description = "", centre = 0, font = 0, scale = 0.4},
 				{name = "Blue on White 3",plateindex = 4,costs = 0, description = "", centre = 0, font = 0, scale = 0.4},
 				{name = "Yellow on Blue",plateindex = 2,costs = 0, description = "", centre = 0, font = 0, scale = 0.4},
 				{name = "Yellow on Black",plateindex = 1,costs = 0, description = "", centre = 0, font = 0, scale = 0.4}
 			}
-		},["repair"] = {
-		title = "CATEGORIES",
+		},["repair"] = { 
+		title = "CATEGORIES", 
 		name = "repair",
-		buttons = {
-			{name = "Repair vehicle", description = "Komplette Autoreparatur.", costs = 500, centre = 0, font = 0, scale = 0.4}
-
+		buttons = { 
+			{name = "Repair vehicle", description = "Full body repair and engine service.", costs = 0, centre = 0, font = 0, scale = 0.4}
+			
 		}
 	},
-	["armor"] = {
-		title = "armor",
+	["armor"] = { 
+		title = "armor", 
 		name = "armor",
-		buttons = {
+		buttons = { 
 			{name = "None",modtype = 16, mod = -1,costs = 0, description = "", centre = 0, font = 0, scale = 0.4},
-			{name = "Armor Upgrade 20%",modtype = 16, mod = false, costs = 100, description = "", centre = 0, font = 0, scale = 0.4},
-			{name = "Armor Upgrade 40%",modtype = 16, mod = 1, costs = 3590, description = "", centre = 0, font = 0, scale = 0.4},
-			{name = "Armor Upgrade 60%",modtype = 16, mod = 2, costs = 3890, description = "", centre = 0, font = 0, scale = 0.4},
-			{name = "Armor Upgrade 80%",modtype = 16, mod = 3, costs = 8000, description = "", centre = 0, font = 0, scale = 0.4},
-			{name = "Armor Upgrade 100%",modtype = 16, mod = 4, costs = 10000, description = "", centre = 0, font = 0, scale = 0.4}
-
+			{name = "Armor Upgrade 20%",modtype = 16, mod = false, costs = 0, description = "", centre = 0, font = 0, scale = 0.4},
+			{name = "Armor Upgrade 40%",modtype = 16, mod = 1, costs = 0, description = "", centre = 0, font = 0, scale = 0.4},
+			{name = "Armor Upgrade 60%",modtype = 16, mod = 2, costs = 0, description = "", centre = 0, font = 0, scale = 0.4},
+			{name = "Armor Upgrade 80%",modtype = 16, mod = 3, costs = 0, description = "", centre = 0, font = 0, scale = 0.4},
+			{name = "Armor Upgrade 100%",modtype = 16, mod = 4, costs = 0, description = "", centre = 0, font = 0, scale = 0.4}
+			
 		}
 	},
-	["brakes"] = {
-		title = "brakes",
+	["brakes"] = { 
+		title = "brakes", 
 		name = "brakes",
-		buttons = {
-			{name = "Stock Brakes",modtype = 12, mod = -1, costs = 100, description = "", centre = 0, font = 0, scale = 0.4},
-			{name = "Street Brakes",modtype = 12, mod = false, costs = 200, description = "", centre = 0, font = 0, scale = 0.4},
-			{name = "Sport Brakes",modtype = 12, mod = 1, costs = 300, description = "", centre = 0, font = 0, scale = 0.4},
-			{name = "Race Brakes",modtype = 12, mod = 2, costs = 400, description = "", centre = 0, font = 0, scale = 0.4}
-
+		buttons = { 
+			{name = "Stock Brakes",modtype = 12, mod = -1, costs = 0, description = "", centre = 0, font = 0, scale = 0.4},
+			{name = "Street Brakes",modtype = 12, mod = false, costs = 0, description = "", centre = 0, font = 0, scale = 0.4},
+			{name = "Sport Brakes",modtype = 12, mod = 1, costs = 0, description = "", centre = 0, font = 0, scale = 0.4},
+			{name = "Race Brakes",modtype = 12, mod = 2, costs = 0, description = "", centre = 0, font = 0, scale = 0.4}
+			
 		}
 	},
-	["engine"] = {
-		title = "engine tunes",
+	["engine"] = { 
+		title = "engine tunes", 
 		name = "engine",
-		buttons = {
-			{name = "EMS Upgrade, Level 1",modtype = 11, mod = -1, costs = 1000, description = "", centre = 0, font = 0, scale = 0.4},
-			{name = "EMS Upgrade, Level 2",modtype = 11, mod = false, costs = 2000, description = "", centre = 0, font = 0, scale = 0.4},
-			{name = "EMS Upgrade, Level 3",modtype = 11, mod = 1, costs = 3000, description = "", centre = 0, font = 0, scale = 0.4},
-			{name = "EMS Upgrade, Level 4",modtype = 11, mod = 2, costs = 4000, description = "", centre = 0, font = 0, scale = 0.4}
+		buttons = { 
+			{name = "EMS Upgrade, Level 1",modtype = 11, mod = -1, costs = 0, description = "", centre = 0, font = 0, scale = 0.4},
+			{name = "EMS Upgrade, Level 2",modtype = 11, mod = false, costs = 0, description = "", centre = 0, font = 0, scale = 0.4},
+			{name = "EMS Upgrade, Level 3",modtype = 11, mod = 1, costs = 0, description = "", centre = 0, font = 0, scale = 0.4},
+			{name = "EMS Upgrade, Level 4",modtype = 11, mod = 2, costs = 0, description = "", centre = 0, font = 0, scale = 0.4}
 		}
 	},
-	["horn"] = {
-			title = "horns",
+	["horn"] = { 
+			title = "horns", 
 			name = "horn",
-			buttons = {
+			buttons = { 
 				{name = "Stock Horn",modtype = 14, mod = -1,costs =0, description = "", centre = 0, font = 0, scale = 0.4},
 				{name = "Truck Horn",modtype = 14, mod = false,costs =0, description = "", centre = 0, font = 0, scale = 0.4},
 				{name = "Police Horn",modtype = 14, mod = 1,costs =0, description = "", centre = 0, font = 0, scale = 0.4},
@@ -1088,7 +1089,7 @@ local lsc = {
 		},
 	}
 }
-local modPrice = {} -- JINK: Table to store Mod prices. Possibly for a total money spent display.
+
 local vehiclecol = {}
 local extracol = {}
 local wheeltype = nil
@@ -1096,25 +1097,25 @@ local neoncolor = nil
 local plateindex = nil
 local windowtint = nil
 local mods = {
-				[0] = { mod = nil },
-				[1] = { mod = nil },
-				[2] = { mod = nil },
-				[3] = { mod = nil },
-				[4] = { mod = nil },
-				[5] = { mod = nil },
-				[6] = { mod = nil },
-				[7] = { mod = nil },
-				[8] = { mod = nil },
-				[9] = { mod = nil },
-				[10] = { mod = nil },
-				[11] = { mod = nil },
-				[12] = { mod = nil },
-				[13] = { mod = nil },
-				[14] = { mod = nil },
-				[15] = { mod = nil },
-				[16] = { mod = nil },
-				[23] = { mod = nil },
-				[24] = { mod = nil },
+[0] = { mod = nil },
+[1] = { mod = nil },
+[2] = { mod = nil },
+[3] = { mod = nil },
+[4] = { mod = nil },
+[5] = { mod = nil },
+[6] = { mod = nil },
+[7] = { mod = nil },
+[8] = { mod = nil },
+[9] = { mod = nil },
+[10] = { mod = nil },
+[11] = { mod = nil },
+[12] = { mod = nil },
+[13] = { mod = nil },
+[14] = { mod = nil },
+[15] = { mod = nil },
+[16] = { mod = nil },
+[23] = { mod = nil },
+[24] = { mod = nil },
 }
 
 function f(n)
@@ -1126,16 +1127,14 @@ return GetPlayerPed(-1)
 end
 
 function try(f, catch_f)
-	local status, exception = pcall(f)
-	if not status then
-		catch_f(exception)
-	end
+local status, exception = pcall(f)
+if not status then
+catch_f(exception)
 end
-
+end
 function firstToUpper(str)
     return (str:gsub("^%l", string.upper))
 end
-
 function DriveInGarage()
 		local pos = lsc.currentpos.inside
 		--TriggerServerEvent('print',"start")
@@ -1149,8 +1148,8 @@ function DriveInGarage()
 			else
 				lsc.currentmenu = "main"
 			end
-
-			SetVehicleModKit(veh,0)
+			
+			SetVehicleModKit(veh,0)	
 			local bumper = false
 			local insrt = table.insert
 			lsc.menu["main"].buttons = {}
@@ -1196,7 +1195,7 @@ function DriveInGarage()
 						end
 				end
 			end
-
+			
 			if bumper then
 			insrt(lsc.menu["main"].buttons, {name = "Bumpers", description = "", centre = 0, font = 0, scale = 0.4})
 			end
@@ -1212,7 +1211,7 @@ function DriveInGarage()
 				insrt(lsc.menu["wheeltype"].buttons, {name = "Back Wheel", wtype = 6, description = "", centre = 0, font = 0, scale = 0.4})
 			end
 			--TriggerServerEvent('print',"finished main")
-			SetVehicleModKit(veh,0)
+			SetVehicleModKit(veh,0)	
 			local mod = 1
 			lsc.menu["frontbumper"].buttons = {}
 			Citizen.Trace(tostring(veh).." mod:"..mod.." num:"..tostring(GetNumVehicleMods(veh,mod)))
@@ -1233,7 +1232,7 @@ function DriveInGarage()
 				end
 			end
 			Citizen.Trace('finished frontbumper')
-			SetVehicleModKit(veh,0)
+			SetVehicleModKit(veh,0)	
 			Citizen.Trace('set modkit')
 			mod = 2
 			Citizen.Trace('finished mod setting')
@@ -1256,7 +1255,7 @@ function DriveInGarage()
 				end
 			end
 			mod = 4
-			SetVehicleModKit(veh,0)
+			SetVehicleModKit(veh,0)	
 			lsc.menu["exhaust"].buttons = {}
 			Citizen.Trace(tostring(veh).." mod:"..mod.." num:"..tostring(GetNumVehicleMods(veh,mod)))
 			if GetNumVehicleMods(veh,mod) ~= nil and GetNumVehicleMods(veh,mod) ~= false then
@@ -1272,11 +1271,11 @@ function DriveInGarage()
 							Citizen.Trace(name.." "..mod.." "..mod)
 						end
 					end
-				end
+				end		
 			end
 			mod = 8
 			lsc.menu["fenders"].buttons = {}
-			SetVehicleModKit(veh,0)
+			SetVehicleModKit(veh,0)	
 			Citizen.Trace(tostring(veh).." mod:"..mod.." num:"..tostring(GetNumVehicleMods(veh,mod)))
 			if GetNumVehicleMods(veh,mod) ~= nil and GetNumVehicleMods(veh,mod) ~= false then
 				insrt(lsc.menu["fenders"].buttons, {name = "None",modtype = mod,costs = 0,mod = -1, description = "", centre = 0, font = 0, scale = 0.4})
@@ -1291,10 +1290,10 @@ function DriveInGarage()
 							Citizen.Trace(name.." "..mod.." "..mod)
 						end
 					end
-				end
+				end	
 			end
 			mod = 9
-			SetVehicleModKit(veh,0)
+			SetVehicleModKit(veh,0)	
 			if GetNumVehicleMods(veh,mod) ~= nil and GetNumVehicleMods(veh,mod) ~= false then
 				for i = 0,   tonumber(GetNumVehicleMods(veh,mod)) -1 do
 					local lbl = GetModTextLabel(veh,mod,i)
@@ -1306,11 +1305,11 @@ function DriveInGarage()
 							insrt(lsc.menu["fenders"].buttons, {name = name,modtype = mod,costs = 0,mod = i, description = "", centre = 0, font = 0, scale = 0.4})
 						end
 					end
-				end
+				end	
 			end
 			mod = 7
 			lsc.menu["hood"].buttons = {}
-			SetVehicleModKit(veh,0)
+			SetVehicleModKit(veh,0)	
 			Citizen.Trace(tostring(veh).." mod:"..mod.." num:"..tostring(GetNumVehicleMods(veh,mod)))
 			if GetNumVehicleMods(veh,mod) ~= nil and GetNumVehicleMods(veh,mod) ~= false then
 				insrt(lsc.menu["hood"].buttons, {name = "None",modtype = mod,costs = 0,mod = -1, description = "", centre = 0, font = 0, scale = 0.4})
@@ -1325,12 +1324,12 @@ function DriveInGarage()
 							Citizen.Trace(name.." "..mod.." "..mod)
 						end
 					end
-				end
+				end	
 			end
-
+			
 			mod = 5
 			lsc.menu["rollcage"].buttons = {}
-			SetVehicleModKit(veh,0)
+			SetVehicleModKit(veh,0)	
 			Citizen.Trace(tostring(veh).." mod:"..mod.." num:"..tostring(GetNumVehicleMods(veh,mod)))
 			if GetNumVehicleMods(veh,mod) ~= nil and GetNumVehicleMods(veh,mod) ~= false then
 				insrt(lsc.menu["rollcage"].buttons, {name = "None",modtype = mod,costs = 0,mod = -1, description = "", centre = 0, font = 0, scale = 0.4})
@@ -1342,16 +1341,16 @@ function DriveInGarage()
 						local name = tostring(GetLabelText(lbl))
 						if name ~= "NULL" then
 							insrt(lsc.menu["rollcage"].buttons, {name = name,modtype = mod,costs = 0,mod = i, description = "", centre = 0, font = 0, scale = 0.4})
-
+							
 							Citizen.Trace(name.." "..mod.." "..mod)
 						end
 					end
-				end
+				end	
 			end
-
+			
 			mod = 10
 			lsc.menu["roof"].buttons = {}
-			SetVehicleModKit(veh,0)
+			SetVehicleModKit(veh,0)	
 			Citizen.Trace(tostring(veh).." mod:"..mod.." num:"..tostring(GetNumVehicleMods(veh,mod)))
 			if GetNumVehicleMods(veh,mod) ~= nil and GetNumVehicleMods(veh,mod) ~= false then
 				insrt(lsc.menu["roof"].buttons, {name = "None",modtype = mod,costs = 0,mod = -1, description = "", centre = 0, font = 0, scale = 0.4})
@@ -1363,16 +1362,16 @@ function DriveInGarage()
 						local name = tostring(GetLabelText(lbl))
 						if name ~= "NULL" then
 							insrt(lsc.menu["roof"].buttons, {name = name,modtype = mod,costs = 0,mod = i, description = "", centre = 0, font = 0, scale = 0.4})
-
+							
 							Citizen.Trace(name.." "..mod.." "..mod)
 						end
 					end
-				end
+				end	
 			end
-
+			
 			mod = 3
 			lsc.menu["skirts"].buttons = {}
-			SetVehicleModKit(veh,0)
+			SetVehicleModKit(veh,0)	
 			Citizen.Trace(tostring(veh).." mod:"..mod.." num:"..tostring(GetNumVehicleMods(veh,mod)))
 			if GetNumVehicleMods(veh,mod) ~= nil and GetNumVehicleMods(veh,mod) ~= false then
 				insrt(lsc.menu["skirts"].buttons, {name = "None",modtype = mod,costs = 0,mod = -1, description = "", centre = 0, font = 0, scale = 0.4})
@@ -1384,16 +1383,16 @@ function DriveInGarage()
 						local name = tostring(GetLabelText(lbl))
 						if name ~= "NULL" then
 							insrt(lsc.menu["skirts"].buttons, {name = name,modtype = mod,costs = 0,mod = i, description = "", centre = 0, font = 0, scale = 0.4})
-
+							
 							Citizen.Trace(name.." "..mod.." "..mod)
 						end
 					end
-				end
+				end	
 			end
-
+			
 			mod = 0
 			lsc.menu["spoiler"].buttons = {}
-			SetVehicleModKit(veh,0)
+			SetVehicleModKit(veh,0)	
 			Citizen.Trace(tostring(veh).." mod:"..mod.." num:"..tostring(GetNumVehicleMods(veh,mod)))
 			if GetNumVehicleMods(veh,mod) ~= nil and GetNumVehicleMods(veh,mod) ~= false then
 				insrt(lsc.menu["spoiler"].buttons, {name = "None",modtype = mod,costs = 0,mod = -1, description = "", centre = 0, font = 0, scale = 0.4})
@@ -1405,16 +1404,16 @@ function DriveInGarage()
 						local name = tostring(GetLabelText(lbl))
 						if name ~= "NULL" then
 							insrt(lsc.menu["spoiler"].buttons, {name = name,modtype = mod,costs = 0,mod = i, description = "", centre = 0, font = 0, scale = 0.4})
-
+							
 							Citizen.Trace(name.." "..mod.." "..mod)
 						end
 					end
-				end
+				end	
 			end
-
+			
 			mod = 6
 			lsc.menu["grille"].buttons = {}
-			SetVehicleModKit(veh,0)
+			SetVehicleModKit(veh,0)	
 			Citizen.Trace(tostring(veh).." mod:"..mod.." num:"..tostring(GetNumVehicleMods(veh,mod)))
 			if GetNumVehicleMods(veh,mod) ~= nil and GetNumVehicleMods(veh,mod) ~= false then
 				insrt(lsc.menu["grille"].buttons, {name = "None",modtype = mod,costs = 0,mod = -1, description = "", centre = 0, font = 0, scale = 0.4})
@@ -1426,16 +1425,16 @@ function DriveInGarage()
 						local name = tostring(GetLabelText(lbl))
 						if name ~= "NULL" then
 							insrt(lsc.menu["grille"].buttons, {name = name,modtype = mod,costs = 0,mod = i, description = "", centre = 0, font = 0, scale = 0.4})
-
+							
 							Citizen.Trace(name.." "..mod.." "..mod)
 						end
 					end
-				end
+				end	
 			end
-
+			
 			mod = 5
 			lsc.menu["chassis"].buttons = {}
-			SetVehicleModKit(veh,0)
+			SetVehicleModKit(veh,0)	
 			Citizen.Trace(tostring(veh).." mod:"..mod.." num:"..tostring(GetNumVehicleMods(veh,mod)))
 			if GetNumVehicleMods(veh,mod) ~= nil and GetNumVehicleMods(veh,mod) ~= false then
 				insrt(lsc.menu["chassis"].buttons, {name = "None",modtype = mod,costs = 0,mod = -1, description = "", centre = 0, font = 0, scale = 0.4})
@@ -1447,18 +1446,18 @@ function DriveInGarage()
 						local name = tostring(GetLabelText(lbl))
 						if name ~= "NULL" then
 							insrt(lsc.menu["chassis"].buttons, {name = name,modtype = mod,costs = 0,mod = i, description = "", centre = 0, font = 0, scale = 0.4})
-
+							
 							Citizen.Trace(name.." "..mod.." "..mod)
 						end
 					end
-				end
+				end	
 			end
 			lsc.inside = true
 			vehiclecol = table.pack(GetVehicleColours(veh))
 			extracol = table.pack(GetVehicleExtraColours(veh))
 			neoncolor = table.pack(GetVehicleNeonLightsColour(veh))
 			plateindex = GetVehicleNumberPlateTextIndex(veh)
-			for i,t in pairs(mods) do
+			for i,t in pairs(mods) do 
 				t.mod = GetVehicleMod(veh,i)
 			end
 			windowtint = GetVehicleWindowTint(veh)
@@ -1473,7 +1472,7 @@ function DriveInGarage()
 			SetEntityCollision(veh,false,false)
 			TriggerServerEvent('lockGarage',true,lsc.currentgarage)
 		end
-
+	
 end
 
 function DriveOutOfGarage(pos)
@@ -1484,9 +1483,6 @@ function DriveOutOfGarage(pos)
     local plate = GetVehicleNumberPlateText(veh)
     local colors = table.pack(GetVehicleColours(veh))
     local extra_colors = table.pack(GetVehicleExtraColours(veh))
-     dump(modPrice)
-		-- The mods can not be saved if they do not exist.
-		-- Must find out if I can read them somehow
     TriggerServerEvent('UpdateVeh', plate, colors[1], colors[2], extra_colors[1], extra_colors[2], mods)
 	SetEntityCoords(veh,pos.x,pos.y,pos.z)
 	SetEntityHeading(veh,pos.heading)
@@ -1520,6 +1516,7 @@ function DriveOutOfGarage(pos)
 	SetVehicleDoorsLocked(veh,0)
 	TriggerServerEvent('lockGarage',false,lsc.currentgarage)
 	lsc.currentgarage = 0
+    
 end
 
 function drawTxt(text,font,centre,x,y,scale,r,g,b,a)
@@ -1534,7 +1531,7 @@ function drawTxt(text,font,centre,x,y,scale,r,g,b,a)
 	SetTextCentre(centre)
 	SetTextEntry("STRING")
 	AddTextComponentString(text)
-	DrawText(x , y)
+	DrawText(x , y)	
 end
 
 function drawMenuButton(button,x,y,selected)
@@ -1554,7 +1551,7 @@ function drawMenuButton(button,x,y,selected)
 	else
 		DrawRect(x,y,lsc.menu.width,lsc.menu.height,0,0,0,150)
 	end
-	DrawText(x - lsc.menu.width/2 + 0.005, y - lsc.menu.height/2 + 0.0028)
+	DrawText(x - lsc.menu.width/2 + 0.005, y - lsc.menu.height/2 + 0.0028)	
 end
 
 function drawMenuCost(button,x,y,selected)
@@ -1570,9 +1567,9 @@ function drawMenuCost(button,x,y,selected)
 	if button.costs == 0 then
 		AddTextComponentString("free")
 	else
-		AddTextComponentString(tostring(button.costs))
+		AddTextComponentString(button.costs)
 	end
-	DrawText(x + lsc.menu.width/2 - 0.035, y - lsc.menu.height/2 + 0.0028)
+	DrawText(x + lsc.menu.width/2 - 0.035, y - lsc.menu.height/2 + 0.0028)	
 end
 
 function drawMenuOwned(x,y,selected)
@@ -1586,7 +1583,7 @@ function drawMenuOwned(x,y,selected)
 	end
 	SetTextEntry("STRING")
 	AddTextComponentString("owned")
-	DrawText(x + lsc.menu.width/2 - 0.035, y - lsc.menu.height/2 + 0.0028)
+	DrawText(x + lsc.menu.width/2 - 0.035, y - lsc.menu.height/2 + 0.0028)	
 end
 
 function drawMenuTitle(txt,x,y)
@@ -1597,15 +1594,13 @@ function drawMenuTitle(txt,x,y)
 	SetTextEntry("STRING")
 	AddTextComponentString(txt)
 	DrawRect(x,y,lsc.menu.width,lsc.menu.height,0,0,0,150)
-	DrawText(x - lsc.menu.width/2 + 0.005, y - lsc.menu.height/2 + 0.0028)
+	DrawText(x - lsc.menu.width/2 + 0.005, y - lsc.menu.height/2 + 0.0028)	
 end
-
 function tablelength(T)
   local count = 0
   for _ in pairs(T) do count = count + 1 end
   return count
 end
-
 local backlock = false
 local horn = ''
 Citizen.CreateThread(function()
@@ -1617,19 +1612,19 @@ Citizen.CreateThread(function()
 				local veh = GetVehiclePedIsUsing(ped)
 				if DoesEntityExist(veh) and (IsThisModelACar(GetEntityModel(veh)) or IsThisModelABike(GetEntityModel(veh)))  then
 					for i,pos in ipairs(lsc.locations) do
-						outside = pos.outside
+						outside = pos.outside						
 						if GetDistanceBetweenCoords(outside.x,outside.y,outside.z,GetEntityCoords(ped)) <= f(5) then
 							if pos.locked == false then
-								drawTxt("Drücke ~b~ENTER~w~ um ~b~Los Santos Customs~w~ zu Betreten ",4,1,0.5,0.8,1.0,255,255,255,255)
+								drawTxt("Press ~b~ENTER~w~ to enter ~b~Los Santos Customs ",4,1,0.5,0.8,1.0,255,255,255,255)
 								if IsControlJustPressed(1,201) then
-
+									
 										lsc.currentpos = pos
 										lsc.currentgarage = i
 										DriveInGarage()
-
+								
 								end
 							else
-								drawTxt("~r~Besetzt, Bitte warten",4,1,0.5,0.8,1.0,255,255,255,255)
+								drawTxt("~r~Locked, please wait",4,1,0.5,0.8,1.0,255,255,255,255)
 							end
 						end
 					end
@@ -1645,10 +1640,10 @@ Citizen.CreateThread(function()
 					local y = lsc.menu.y + 0.12
 					buttoncount = tablelength(menu.buttons)
 					local selected = false
-
+					
 					for i,button in pairs(menu.buttons) do
 						if i >= lsc.menu.from and i <= lsc.menu.to then
-
+							
 							if i == lsc.selectedbutton then
 								selected = true
 							else
@@ -1789,7 +1784,7 @@ Citizen.CreateThread(function()
 										if GetVehicleTyresCanBurst(veh) == false then
 											drawMenuOwned(lsc.menu.x,y,selected)
 										else
-											drawMenuCost(button,lsc.menu.x,y,selected)
+											drawMenuCost(button,lsc.menu.x,y,selected)	
 										end
 									elseif string.find(button.name:lower(),'smoke') then
 										local col = table.pack(GetVehicleTyreSmokeColor(veh))
@@ -1803,7 +1798,7 @@ Citizen.CreateThread(function()
 									if windowtint == button.tint then
 										drawMenuOwned(lsc.menu.x,y,selected)
 									else
-										drawMenuCost(button,lsc.menu.x,y,selected)
+										drawMenuCost(button,lsc.menu.x,y,selected)	
 									end
 								else
 									drawMenuCost(button,lsc.menu.x,y,selected)
@@ -1838,12 +1833,12 @@ Citizen.CreateThread(function()
 									end
 									if lsc.currentmenu == "horn" or lsc.currentmenu == "roof" or lsc.currentmenu == "suspension" or lsc.currentmenu == "horns" or lsc.currentmenu == "hood" or lsc.currentmenu == "grille" or lsc.currentmenu == "rollcage" or lsc.currentmenu == "exhaust" or lsc.currentmenu == "skirts" or lsc.currentmenu == "rearbumper" or lsc.currentmenu == "frontbumper" or lsc.currentmenu == "spoiler"  then
 										SetVehicleMod(veh, button.modtype, button.mod)
-
+										
 									end
 									if  lsc.currentmenu == "sport" or lsc.currentmenu == "muscle" or lsc.currentmenu == "lowrider" or lsc.currentmenu == "backwheel" or lsc.currentmenu == "frontwheel" or lsc.currentmenu == "highend" or lsc.currentmenu == "suv" or lsc.currentmenu == "offroad" or lsc.currentmenu == "tuner" then
 										SetVehicleMod(veh, button.modtype, button.mod)
 									end
-
+									
 									if lsc.currentmenu == "fenders" then
 										if button.mod == -1 then
 											SetVehicleMod(veh, 8, button.mod)
@@ -1852,7 +1847,7 @@ Citizen.CreateThread(function()
 										SetVehicleMod(veh, button.modtype, button.mod)
 										end
 									end
-
+									
 									if lsc.currentmenu == "horn" then
 										if horn ~= button.name then
 											horn = button.name
@@ -1873,7 +1868,7 @@ Citizen.CreateThread(function()
 								end
 						end
 					end
-
+			
 		end
 		if lsc ~= nil and lsc.inside then
 			if IsControlJustPressed(1,202) then
@@ -1898,40 +1893,17 @@ Citizen.CreateThread(function()
 						lsc.menu.to = lsc.menu.to + 1
 						lsc.menu.from = lsc.menu.from + 1
 					end
-				end
+				end	
 			end
 		end
-
+		
 	end
 end)
 
--- DEBUG JINK: Dumps table contents in a readable format.
-function dump(o)
-   if type(o) == 'table' then
-      local s = '{ '
-      for k,v in pairs(o) do
-         if type(k) ~= 'number' then k = '"'..k..'"' end
-         s = s .. '['..k..'] = ' .. dump(v) .. ','
-      end
-      return s .. '} '
-   else
-      return tostring(o)
-   end
-end
 
 function ButtonSelected(button)
 	local ped = GetPlayerPed(-1)
 	local car = GetVehiclePedIsUsing(ped)
- 	 -- DEBUG JINK
- 	if button.costs == nil then
-		Citizen.Trace("Cost is : " .. tostring(button.costs))
- 	else
- 		Citizen.Trace("Cost is : " .. tostring(button.costs))
- 		local modPrice = button.costs
- 		TriggerServerEvent('receivePaymentInfo', modPrice)
- 	end
- 	-- END DEBUG JINK
-
 	if lsc.currentmenu == "repair" then
 		if button.name == "Repair vehicle" then
 			SetVehicleFixed(car)
@@ -1967,7 +1939,7 @@ function ButtonSelected(button)
 		elseif button.name == "Lights" then
 			SetVehicleModKit(car,0)
 			OpenMenu("lights")
-
+			
 		elseif button.name == "Roll Cage" then
 			SetVehicleModKit(car,0)
 			OpenMenu("rollcage")
@@ -2022,9 +1994,9 @@ function ButtonSelected(button)
 		elseif button.name == "Matte" then
 			OpenMenu("primarymatte")
 		elseif button.name == "Metals" then
-			OpenMenu("primarymetal")
+			OpenMenu("primarymetal") 
 		elseif button.name == "Metallic" then
-			OpenMenu("primarymetallic")
+			OpenMenu("primarymetallic") 
 		end
 	elseif lsc.currentmenu == "secondarycolor" then
 		if button.name == "Chrome" then
@@ -2034,9 +2006,9 @@ function ButtonSelected(button)
 		elseif button.name == "Matte" then
 			OpenMenu("secondarymatte")
 		elseif button.name == "Metals" then
-			OpenMenu("secondarymetal")
+			OpenMenu("secondarymetal") 
 		elseif button.name == "Metallic" then
-			OpenMenu("secondarymetallic")
+			OpenMenu("secondarymetallic") 
 		end
 	elseif lsc.currentmenu == "primarychrome" then
 		vehiclecol[1] = button.colorindex
@@ -2072,20 +2044,20 @@ function ButtonSelected(button)
 			OpenMenu('headlights')
 		elseif button.name == "Neon Kits" then
 			OpenMenu('neonkits')
-		end
+		end 
 	elseif lsc.currentmenu == "neonkits" then
 		if button.name == "Neon Layout" then
 			OpenMenu('neonlayout')
 		elseif button.name == "Neon Color" then
 			OpenMenu('neoncolor')
-		end
+		end 
 	elseif lsc.currentmenu == "headlights" then
 		if button.name == "Stock Lights" then
 			ToggleVehicleMod(car, 22, false)
-
+		
 		elseif button.name == "Xenon Lights" then
 			ToggleVehicleMod(car, 22, true)
-		end
+		end 
 	elseif lsc.currentmenu == "plate" then
 		plateindex = button.plateindex
 	elseif lsc.currentmenu == "chassis" or lsc.currentmenu == "armor" or lsc.currentmenu == "brakes" or lsc.currentmenu == "frontbumper" or lsc.currentmenu == "rearbumper" or lsc.currentmenu == "engine" or lsc.currentmenu == "exhaust" or lsc.currentmenu == "hood" or lsc.currentmenu == "horn" or lsc.currentmenu == "rollcage" or lsc.currentmenu == "roof" or lsc.currentmenu == "skirts" or lsc.currentmenu == "spoiler" or lsc.currentmenu == "suspension" or lsc.currentmenu == "transmission" or lsc.currentmenu == "grille" or lsc.currentmenu == "horn" then
@@ -2104,10 +2076,10 @@ function ButtonSelected(button)
 	elseif lsc.currentmenu == "turbo" then
 		if button.name == "None" then
 			ToggleVehicleMod(car, button.modtype, false)
-
+		
 		elseif button.name == "Turbo Tuning" then
 			ToggleVehicleMod(car, button.modtype, true)
-		end
+		end 
 	elseif lsc.currentmenu == "wheels" then
 		if button.name == "Wheel Type" then
 			OpenMenu('wheeltype')
@@ -2164,6 +2136,7 @@ function ButtonSelected(button)
 			ToggleVehicleMod(car,20,true)
 			SetVehicleTyreSmokeColor(car,button.color[1],button.color[2],button.color[3])
             local plate = GetVehicleNumberPlateText(car)
+            TriggerServerEvent('VehUpdateTyreSmoke', plate, button.color[1], button.color[2], button.color[3])
 		end
 	elseif lsc.currentmenu == "neonlayout" then
 		if button.name == "None" then
@@ -2220,7 +2193,7 @@ function OpenMenu(menu)
 	lsc.menu.from = 1
 	lsc.menu.to = 10
 	lsc.selectedbutton = 0
-	lsc.currentmenu = menu
+	lsc.currentmenu = menu	
 end
 
 
@@ -2315,7 +2288,6 @@ end
 function stringstarts(String,Start)
    return string.sub(String,1,string.len(Start))==Start
 end
-
 function AddBlips()
 	for i,pos in ipairs(lsc.locations) do
 		local blip = AddBlipForCoord(pos.inside.x,pos.inside.y,pos.inside.z)
@@ -2326,13 +2298,12 @@ end
 --TODO: Event needed to add blips when player is spawned
 local firstspawn = 0
 AddEventHandler('playerSpawned', function(spawn)
-	if firstspawn == 0 then
-		AddBlips()
-		TriggerServerEvent('getGarageInfo')
-		firstspawn = 1
-	end
+if firstspawn == 0 then
+	AddBlips()
+	TriggerServerEvent('getGarageInfo')
+	firstspawn = 1
+end
 end)
-
 RegisterNetEvent('lockGarage')
 AddEventHandler('lockGarage', function(tbl)
 	for i,garage in ipairs(tbl) do
@@ -2340,8 +2311,3 @@ AddEventHandler('lockGarage', function(tbl)
 	end
 end)
 
--- RegisterNetEvent('blockPurchase')
--- AddEventHandler('blockPurchase', function (blockPurchase)	-- TODO JINK working on the blocking of purchases if not enough cash
- 
-
--- end)
