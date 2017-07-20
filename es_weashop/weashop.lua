@@ -156,7 +156,9 @@ local weashop = {
 
 local fakeWeapon = ''
 local weashop_locations = {
-{entering = {21.964782714844,-1105.2205810547, 29.797004699707 }, inside = {21.964782714844,-1105.2205810547,29.797004699707}, outside = {21.964782714844,-1105.2205810547, 29.797004699707 }},
+{entering = {20.904180526733,-1106.3345947266,28.797029495239 }, inside = {20.904180526733,-1106.3345947266,28.897029495239}, outside = {21.169200897217,-1105.7039794922,30.79415512085}},
+{entering = {1692.7568359375,3759.1606445313,33.705318450928 }, inside = {1692.7568359375,3759.1606445313,34.705318450928}, outside = {21.169200897217,3760.94140625,34.705318450928}},
+{entering = {-331.31369018555,6083.3662109375,30.454784393311 }, inside = {-331.31369018555,6083.3662109375,32.454784393311}, outside = {21.169200897217,3760.94140625,34.705318450928}},
 }
 
 local weashop_blips ={}
@@ -196,7 +198,7 @@ function ShowWeashopBlips(bool)
 			-- 60 58 137
 			SetBlipSprite(blip,110)
 			BeginTextCommandSetBlipName("STRING")
-			AddTextComponentString('Ammunation')
+			AddTextComponentString('Waffen Laden')
 			EndTextCommandSetBlipName(blip)
 			SetBlipAsShortRange(blip,true)
 			SetBlipAsMissionCreatorBlip(blip,true)
@@ -209,7 +211,7 @@ function ShowWeashopBlips(bool)
 				for i,b in ipairs(weashop_blips) do
 					if IsPlayerWantedLevelGreater(GetPlayerIndex(),0) == false and weashop.opened == false and IsPedInAnyVehicle(LocalPed(), true) == false and  GetDistanceBetweenCoords(b.pos.entering[1],b.pos.entering[2],b.pos.entering[3],GetEntityCoords(LocalPed())) < 2 then
 						DrawMarker(1,b.pos.entering[1],b.pos.entering[2],b.pos.entering[3],0,0,0,0,0,0,2.001,2.0001,0.5001,0,155,255,200,0,0,0,0)
-						drawTxt('Drücke ~g~ENTRER~s~ um ~b~Waffen~s~ zu kaufen ',0,1,0.5,0.8,0.6,255,255,255,255)
+						drawTxt('Drücke ~g~ENTER~s~ um ~b~Waffen~s~ zu kaufen ',0,1,0.5,0.8,0.6,255,255,255,255)
 						currentlocation = b
 						inrange = true
 					end
