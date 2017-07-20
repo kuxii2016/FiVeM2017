@@ -181,120 +181,62 @@ end)
 AddEventHandler("playerSpawned", function()
     TriggerServerEvent("vehiclesshop:CheckvehiclesportForvehicles")
 end)
---AddEventHandler('vehiclesshop:Spawnvehicles', function(vehicles, plate, state, primarycolor, secondarycolor, pearlescentcolor, wheelcolor) ORGINAL FILE
-AddEventHandler('vehiclesshop:Spawnvehicles', function(vehicles, plate, state, primarycolor, secondarycolor, pearlescentcolor, wheelcolor, mod0, mod1, mod2, mod3, mod4, mod5, mod6, mod7, mod8, mod9, mod10, mod11, mod12, mod13, mod14, mod15, mod16, mod17, mod18, mod19, mod20, mod21, mod22, mod23, mod24, windowtint, wheeltype)
-    --print("USER:" .. player .. " MODS:" .. vehicles .. "|" .. plate .. "|" .. state .. "|" .. primarycolor ..  "|" .. secondarycolor .. "|" .. pearlescentcolor .. "|" .. wheelcolor .. "|" .. mod0 .. "|" .. mod1 .. "| " .. mod2 ..  "|" .. mod3 .. "|" .. mod4 .. "|" .. mod5 .. "|" .. mod6 .. "|" .. mod7 .. "|" .. mod8 .. "|" .. mod9 .. "|" .. mod10 .. "|" .. mod11 .. "|" .. mod12 .. "|" .. mod13 .. "|" .. mod14 .. "|" .. mod15 .. "|" .. mod16 .. "|" .. mod17 .. "|" .. mod18 .. "|" .. mod19 .. "|" .. mod20 .. "|" .. mod21 .. "|" .. mod22 .. "|" .. mod23 ..  "|" .. mod24 .. "|" .. windowtint ..  "|" .. wheeltype .. "|")
+
+AddEventHandler('vehiclesshop:Spawnvehicles', function(vehicles, plate, state, primarycolor, secondarycolor, pearlescentcolor, wheelcolor, tyrecolor, mods)
 
 	local vehicles = vehicles
+
+	local tyrecolors = tyrecolor
+    local tyre =  {}
+    local localmods = mods
+    for word in string.gmatch(tyrecolors, '([^,]+)') do
+        table.insert(tyre, word)
+    end
 	local car = GetHashKey(vehicles)
 	local plate = plate
 	local state = state
-	--local primarycolor = tonumber(primarycolor)
-	--local secondarycolor = tonumber(secondarycolor)
-	--local pearlescentcolor = tonumber(pearlescentcolor)
-	--local wheelcolor = tonumber(wheelcolor)
-	--TUNINGADDON#############################################
-			local primarycolor = tonumber(primarycolor)
-			local secondarycolor = tonumber(secondarycolor)
-			local pearlescentcolor = tonumber(pearlescentcolor)
-			local wheelcolor = tonumber(wheelcolor)
-			local windowtint = tonumber(windowtint)
-			local wheeltype = tonumber(wheeltype)
-			local mod0 = tonumber(mod0)
-			local mod1 = tonumber(mod1)
-			local mod2 = tonumber(mod2)
-			local mod3 = tonumber(mod3)
-			local mod4 = tonumber(mod4)
-			local mod5 = tonumber(mod5)
-			local mod6 = tonumber(mod6)
-			local mod7 = tonumber(mod7)
-			local mod8 = tonumber(mod8)
-			local mod9 = tonumber(mod9)
-			local mod10 = tonumber(mod10)
-			local mod11 = tonumber(mod11)
-			local mod12 = tonumber(mod12)
-			local mod13 = tonumber(mod13)
-			local mod14 = tonumber(mod14)
-			local mod15 = tonumber(mod15)
-			local mod16 = tonumber(mod16)
-			local mod17 = tonumber(mod17)
-			local mod18 = tonumber(mod18)
-			local mod19 = tonumber(mod19)
-			local mod20 = tonumber(mod20)
-			local mod21 = tonumber(mod21)
-			local mod22 = tonumber(mod22)
-			local mod23 = tonumber(mod23)
-			local mod24 = tonumber(mod24)     
-			local primarycolor = tonumber(primarycolor)
-			local secondarycolor = tonumber(secondarycolor)
-			local pearlescentcolor = tonumber(pearlescentcolor)
-			local wheelcolor = tonumber(wheelcolor)
---###########################################################for Test
-	Citizen.CreateThread(function()
+	local primarycolor = tonumber(primarycolor)
+	local secondarycolor = tonumber(secondarycolor)
+	local pearlescentcolor = tonumber(pearlescentcolor)
+	local wheelcolor = tonumber(wheelcolor)
+
+	Citizen.CreateThread(function()			
 		Citizen.Wait(3000)
 		local caisseo = GetClosestVehicle(vehiclesportsSelected.x, vehiclesportsSelected.y, vehiclesportsSelected.z, 3.000, 0, 70)
 		if DoesEntityExist(caisseo) then
-			drawNotification("Das Gebiet ist voll.!") 
+			drawNotification("Kein Platz zum Spawnen.") 
 		else
 			if state == "Draußen" then
-				drawNotification("Nicht Geparkt.!")
+				drawNotification("Nicht Geparkt.!.")
 			else
-				local mods = {}
-				for i = 0,24 do
-					mods[i] = GetVehicleMod(veh,i)
-				end
 				RequestModel(car)
 				while not HasModelLoaded(car) do
 				Citizen.Wait(0)
 				end
 				veh = CreateVehicle(car, vehiclesportsSelected.x, vehiclesportsSelected.y, vehiclesportsSelected.z, vehiclesportsSelected.axe, true, false)
-				for i,mod in pairs(mods) do
-					SetVehicleModKit(veh,0)
-					--SetVehicleMod(veh,i,mod)
-					SetVehicleMod(veh, 0, mod0)
-					SetVehicleMod(veh, 1, mod1)
-					SetVehicleMod(veh, 2, mod2)
-					SetVehicleMod(veh, 3, mod3)
-					SetVehicleMod(veh, 4, mod4)
-					SetVehicleMod(veh, 5, mod5)
-					SetVehicleMod(veh, 6, mod6)
-					SetVehicleMod(veh, 7, mod7)
-					SetVehicleMod(veh, 8, mod8)
-					SetVehicleMod(veh, 9, mod9)
-					SetVehicleMod(veh, 10, mod10)
-					SetVehicleMod(veh, 11, mod11)
-					SetVehicleMod(veh, 12, mod12)
-					SetVehicleMod(veh, 13, mod13)
-					SetVehicleMod(veh, 14, mod14)
-					SetVehicleMod(veh, 15, mod15)
-					SetVehicleMod(veh, 16, mod16)
-					if mod18 == "1" then
-						ToggleVehicleMod(veh, 18, true)
-					else
-						ToggleVehicleMod(veh, 18, false)
-					end
-					if tiresmoke == "1" then
-						ToggleVehicleMod(veh, 20, true)
-					else
-						ToggleVehicleMod(veh, 20, false)
-					end
-					if mod22 == "1" then
-						ToggleVehicleMod(veh, 22, true)
-					else
-						ToggleVehicleMod(veh, 22, false)
-					end
-						--SetVehicleWheelType(veh, tonumber(wheeltype))
-						SetVehicleMod(veh, 23, mod23)
-						SetVehicleMod(veh, 24, mod24)
-				end
+                for k, v in pairs(localmods) do
+                    local t = k - 1
+                    SetVehicleModKit(veh,0)
+                    SetVehicleMod(veh, tonumber(t), tonumber(v))
+                    Chat("Setting Mod # "..t.. " to value ".. v)
+                end
+                ToggleVehicleMod(veh,20,true)
+                SetVehicleTyreSmokeColor(veh,tonumber(tyre[1]), tonumber(tyre[2]), tonumber(tyre[3]))
 				SetVehicleNumberPlateText(veh, plate)
 				SetVehicleOnGroundProperly(veh)
 				SetVehicleHasBeenOwnedByPlayer(veh,true)
+                --print(GetVehicleOwner(veh))
 				local id = NetworkGetNetworkIdFromEntity(veh)
 				SetNetworkIdCanMigrate(id, true)
 				SetVehicleColours(veh, primarycolor, secondarycolor)
 				SetVehicleExtraColours(veh, pearlescentcolor, wheelcolor)
 				SetEntityInvincible(veh, false) 
+                local blip = AddBlipForEntity(vehicles)
+			    SetBlipSprite(blip,326)
+			    BeginTextCommandSetBlipName("STRING")
+			    AddTextComponentString('Persönliches Fahrzeug')
+			    EndTextCommandSetBlipName(blip)
+			    personalvehicle_blip = blip
 				drawNotification("Gute Fahrt.!")				
 				TriggerServerEvent('vehiclesshop:SetvehiclesOut', vehicles, plate)
    				TriggerServerEvent("vehiclesshop:CheckvehiclesportForvehicles")
@@ -313,7 +255,7 @@ AddEventHandler('vehiclesshop:Storevehicles', function(vehicles, plate)
 		local platecaissei = GetVehicleNumberPlateText(caissei)
 		if DoesEntityExist(caissei) then	
 			if plate ~= platecaissei then						
-				drawNotification("Parke Auto")
+				drawNotification("Das ist nicht dein Auto")
 			else
 				Citizen.InvokeNative(0xEA386986E786A54F, Citizen.PointerValueIntInitialized(caissei))
 				drawNotification("Auto geparkt")
