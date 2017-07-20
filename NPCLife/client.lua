@@ -14,13 +14,16 @@ local ShopClerk = {
 	{id = 1, name = "Shop", BlipID = 52, VoiceName = "SHOP_GREET", Ambiance = "AMMUCITY", Weapon = 0x1D073A89, modelHash = "mp_m_shopkeep_01", x = -2511.16479492188, y = 3616.90478515625, z = 13.6422147750854, heading = 245.000457763672}, 
 	{id = 2, name = "Shop", BlipID = 52, VoiceName = "SHOP_GREET", Ambiance = "AMMUCITY", Weapon = 0x1D073A89, modelHash = "mp_m_shopkeep_01", x = 24.392505645752, y = -1345.41369628906, z = 29.4970207214355, heading = 264.900115966797},
 	{id = 3, name = "Shop", BlipID = 52, VoiceName = "SHOP_GREET", Ambiance = "AMMUCITY", Weapon = 0x1D073A89, modelHash = "mp_m_shopkeep_01", x = -47.3110542297363, y = -1758.62475585938, z = 29.4209995269775, heading = 48.1558074951172},
-	{id = 4, name = "Ammunation", BlipID = 110, VoiceName = "GENERIC_HI", Ambiance = "AMMUCITY", Weapon = 0x1D073A89, modelHash = "s_m_y_ammucity_01", x = 841.843566894531, y = -1035.70556640625, z = 28.1948642730713, heading = 3.31448912620544},
+	{id = 4, name = "", BlipID = 110, VoiceName = "GENERIC_HI", Ambiance = "AMMUCITY", Weapon = 0x1D073A89, modelHash = "s_m_y_ammucity_01", x = 841.843566894531, y = -1035.70556640625, z = 28.1948642730713, heading = 3.31448912620544},
+	{id = 5, name = "", BlipID = 2, VoiceName = "GENERIC_HI", Ambiance = "AMMUCITY", Weapon = 0x1D073A89, modelHash = "s_m_y_ammucity_01", x = 21.779901504517, y = -1105.2043457031, z = 29.797006607056, heading = 500.900115966797},
+	{id = 6, name = "", BlipID = 2, VoiceName = "GENERIC_HI", Ambiance = "AMMUCITY", Weapon = 0x1D073A89, modelHash = "s_m_y_ammucity_01", x = 1691.7677001953, y = 3760.94140625, z = 34.705318450928, heading = 500.900115966797},
+	{id = 7, name = "", BlipID = 2, VoiceName = "GENERIC_HI", Ambiance = "AMMUCITY", Weapon = 0x1D073A89, modelHash = "s_m_y_ammucity_01", x = -332.81521606445, y = 6084.7543945313, z = 31.454742431641, heading = 240.900115966797},
 }
 
 -------------------------------------------------------------------------------------------------
 ---------------------------------- DON'T EDIT THESES LINES --------------------------------------
 -------------------------------------------------------------------------------------------------
-
+--[[
 -- Blip For NPC
 Citizen.CreateThread(function()
 	for k,v in pairs(ShopClerk)do
@@ -33,7 +36,7 @@ Citizen.CreateThread(function()
 		EndTextCommandSetBlipName(blip)
 	end
 end)
-
+--]]
 -------------------------------------------------------------------------------------------------
 ---------------------------------- DON'T EDIT THESES LINES --------------------------------------
 -------------------------------------------------------------------------------------------------
