@@ -10,7 +10,7 @@ RegisterServerEvent('frfuel:fuelAdded')
 AddEventHandler('frfuel:fuelAdded', function(amount)
 
 	TriggerEvent('es:getPlayerFromId', source, function(user)
-    local cost = fuel * amount
+    	local cost = fuel * amount
 	if (tonumber(user.money) >= tonumber(cost)) then
 	local player = user.identifier
 	TriggerClientEvent("es_freeroam:notify", source, "CHAR_LESTER", 1, "Kassierer", false, "Liter Kostet " .. fuel .. "$")
@@ -18,7 +18,7 @@ AddEventHandler('frfuel:fuelAdded', function(amount)
 			TriggerClientEvent("es_freeroam:notify", source, "CHAR_LESTER", 1, "Kassierer", false, "Bezahlt "  .. round(cost) ..  " $ für ".. round(amount) .. " L" )
 		else
 			TriggerClientEvent("es_freeroam:notify", source, "CHAR_LESTER", 1, "Kassierer", false, "Nicht Bezahlt?, Nicht gut! Ich ruf die Bullen..!!")
-			TriggerClientEvent('es_freeroam:1', source)
+			TriggerClientEvent('es_freeroam:2', source)
 		end
 	end)
 end)
