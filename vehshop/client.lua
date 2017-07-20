@@ -12,6 +12,7 @@ local vente_location = {1203.8988037109,-3117.4606933594, 4.040322303772} -- a d
 
 local vehiclesports = {
 	{name="Garage", colour=2, id=50, x=-231.83854675293, y=-1169.0726318359, z=22.011341018677, axe = 120.000},
+	{name="Garage", colour=2, id=50, x=-359.40548706055, y=6325.478515625, z=28.425603485107, axe = 30.000},
 }
 
 vehiclesportsSelected = { {x=nil, y=nil, z=nil}, }
