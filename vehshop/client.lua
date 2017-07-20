@@ -274,16 +274,17 @@ AddEventHandler('vehiclesshop:Selvehicles', function(vehicles, plate)
 	local plate = plate
 	Citizen.CreateThread(function()		
 		Citizen.Wait(0)
-		local caissei = GetClosestVehicle(vente_location[1],vente_location[2],vente_location[3], 5.000, 1, 12294)
+		local caissei = GetClosestVehicle(vente_location[1],vente_location[2],vente_location[3], 3.000, 0, 70)
 		SetEntityAsMissionEntity(caissei, true, true)
 		local platecaissei = GetVehicleNumberPlateText(caissei)
 		if DoesEntityExist(caissei) then
 			if plate ~= platecaissei then
-				drawNotification("Lade Autos")
+				drawNotification("~r~Das Auto Gehört dir Nicht!!.")
 			else
 				Citizen.InvokeNative(0xEA386986E786A54F, Citizen.PointerValueIntInitialized(caissei))
 				TriggerServerEvent('vehiclesshop:Selvehicles', vehiclesco)
 				TriggerServerEvent("vehiclesshop:CheckvehiclesportForvehicles")
+				drawNotification("~g~Verkauft!!.")
 			end
 		else
 			drawNotification("Kein Auto in der Nähe.!")
