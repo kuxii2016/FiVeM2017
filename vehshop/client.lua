@@ -13,6 +13,7 @@ local vente_location = {1203.8988037109,-3117.4606933594, 4.040322303772} -- a d
 local vehiclesports = {
 	{name="Garage", colour=2, id=50, x=-231.83854675293, y=-1169.0726318359, z=22.011341018677, axe = 120.000},
 	{name="Garage", colour=2, id=50, x=-359.40548706055, y=6325.478515625, z=28.425603485107, axe = 30.000},
+	{name="Garage", colour=2, id=50, x=-1396.2978515625, y=1118.7564697266, z=113.83769226074, axe = 120.000},
 }
 
 vehiclesportsSelected = { {x=nil, y=nil, z=nil}, }
@@ -208,7 +209,7 @@ AddEventHandler('vehiclesshop:Spawnvehicles', function(vehicles, plate, state, p
 			drawNotification("Kein Platz zum Spawnen.") 
 		else
 			if state == "Draußen" then
-				drawNotification("Nicht Geparkt.!.")
+				drawNotification("Nicht Geparkt.!")
 			else
 				RequestModel(car)
 				while not HasModelLoaded(car) do
@@ -219,7 +220,7 @@ AddEventHandler('vehiclesshop:Spawnvehicles', function(vehicles, plate, state, p
                     local t = k - 1
                     SetVehicleModKit(veh,0)
                     SetVehicleMod(veh, tonumber(t), tonumber(v))
-                    Chat("Setting Mod # "..t.. " to value ".. v)
+                    --Chat("Setting Mod # "..t.. " to value ".. v)
                 end
                 ToggleVehicleMod(veh,20,true)
                 SetVehicleTyreSmokeColor(veh,tonumber(tyre[1]), tonumber(tyre[2]), tonumber(tyre[3]))
@@ -232,15 +233,16 @@ AddEventHandler('vehiclesshop:Spawnvehicles', function(vehicles, plate, state, p
 				SetVehicleColours(veh, primarycolor, secondarycolor)
 				SetVehicleExtraColours(veh, pearlescentcolor, wheelcolor)
 				SetEntityInvincible(veh, false) 
-                local blip = AddBlipForEntity(vehicles)
-			    SetBlipSprite(blip,326)
-			    BeginTextCommandSetBlipName("STRING")
-			    AddTextComponentString('Persönliches Fahrzeug')
-			    EndTextCommandSetBlipName(blip)
-			    personalvehicle_blip = blip
 				drawNotification("Gute Fahrt.!")				
 				TriggerServerEvent('vehiclesshop:SetvehiclesOut', vehicles, plate)
    				TriggerServerEvent("vehiclesshop:CheckvehiclesportForvehicles")
+					local blip = AddBlipForEntity(veh)
+					SetBlipSprite(blip,326)
+					SetBlipColour(blip, 3)
+					BeginTextCommandSetBlipName("STRING")
+					AddTextComponentString('Persönliches Fahrzeug')
+					EndTextCommandSetBlipName(blip)
+					veh_blip = blip
 			end
 		end
 	end)
@@ -262,7 +264,7 @@ AddEventHandler('vehiclesshop:Storevehicles', function(vehicles, plate)
 				drawNotification("Auto geparkt")
 				TriggerServerEvent('vehiclesshop:SetvehiclesIn', plate)
 				TriggerServerEvent("vehiclesshop:CheckvehiclesportForvehicles")
-					  TriggerServerEvent('vehiclesshop:UpdateVeh', plate, plateindex,primarycolor,secondarycolor,pearlescentcolor,wheelcolor,windowtint,wheeltype,mods0,mods1,mods2,mods3,mods4,mods5,mods6,mods7,mods8,mods9,mods10,mods11,mods12,mods13,mods14,mods15,mods16,turbo,tiresmoke,mods23,mods24)
+				TriggerServerEvent('vehiclesshop:UpdateVeh', plate, plateindex,primarycolor,secondarycolor,pearlescentcolor,wheelcolor,windowtint,wheeltype,mods0,mods1,mods2,mods3,mods4,mods5,mods6,mods7,mods8,mods9,mods10,mods11,mods12,mods13,mods14,mods15,mods16,turbo,tiresmoke,mods23,mods24)
 			end
 		else
 			drawNotification("Kein Auto in der Nähe.!") 
