@@ -45,7 +45,7 @@ end)
 
 AddEventHandler('helishop:CheckForHeli', function()
   TriggerEvent('es:getPlayerFromId', source, function(user)
-    local state = "Sortit"
+    local state = "Draußen"
     local player = user.identifier
     local executed_query = MySQL:executeQuery("SELECT * FROM user_heli WHERE identifier = '@username' AND heli_state ='@state'",
     {['@username'] = player, ['@heli'] = heli, ['@state'] = state})
@@ -66,7 +66,7 @@ AddEventHandler('helishop:SetHeliOut', function(heli, plate)
   TriggerEvent('es:getPlayerFromId', source, function(user)
     local player = user.identifier
     local heli = heli
-    local state = "Sortit"
+    local state = "Draußen"
     local plate = plate
 
     local executed_query = MySQL:executeQuery("UPDATE user_heli SET heli_state='@state' WHERE identifier = '@username' AND heli_plate = '@plate' AND heli_model = '@heli'",
@@ -88,7 +88,7 @@ AddEventHandler('helishop:PutHeliInHeliport', function(heli)
   TriggerEvent('es:getPlayerFromId', source, function(user)
 
     local player = user.identifier
-    local state ="Rentré"
+    local state ="Geparkt"
 
     local executed_query = MySQL:executeQuery("SELECT * FROM user_heli WHERE identifier = '@username'",{['@username'] = player})
     local result = MySQL:getResults(executed_query, {'identifier'})
