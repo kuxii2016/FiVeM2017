@@ -197,8 +197,8 @@ AddEventHandler('helishop:SpawnHeli', function(heli, plate, state, primarycolor,
 		if DoesEntityExist(caisseo) then
 			drawNotification("Das Gebiet ist voll") 
 		else
-			if state == "Sortit" then
-				drawNotification("Wird Repariert.!")
+			if state == "Draußen" then
+				drawNotification("Nicht Geparkt.!")
 			else
 				local mods = {}
 				for i = 0,24 do
