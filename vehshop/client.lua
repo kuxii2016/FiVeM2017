@@ -236,13 +236,15 @@ AddEventHandler('vehiclesshop:Spawnvehicles', function(vehicles, plate, state, p
 				drawNotification("Gute Fahrt.!")				
 				TriggerServerEvent('vehiclesshop:SetvehiclesOut', vehicles, plate)
    				TriggerServerEvent("vehiclesshop:CheckvehiclesportForvehicles")
-					local blip = AddBlipForEntity(veh)
-					SetBlipSprite(blip,326)
-					SetBlipColour(blip, 3)
-					BeginTextCommandSetBlipName("STRING")
-					AddTextComponentString('Persönliches Fahrzeug')
-					EndTextCommandSetBlipName(blip)
-					veh_blip = blip
+				--PERSONAL VEHICLE BLIPS
+				local blip = AddBlipForEntity(veh)
+				SetBlipSprite(blip,326)
+				SetBlipColour(blip, 3)
+				BeginTextCommandSetBlipName("STRING")
+				AddTextComponentString('Persönliches Fahrzeug')
+				EndTextCommandSetBlipName(blip)
+				veh_blip = blip
+				--PERSONAL VEHICLE BLIPS
 			end
 		end
 	end)
