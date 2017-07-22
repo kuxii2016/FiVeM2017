@@ -29,7 +29,6 @@ server_script 'server/wetter.lua'
 -- Client
 client_script 'client/main.lua'
 client_script 'client/player.lua'
-client_script 'car/carhud.lua'
 client_script 'client/carwash.lua'
 client_script 'client/wetter.lua'
 --client_script 'client/garage.lua'
