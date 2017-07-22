@@ -56,32 +56,32 @@ end)
 RegisterNetEvent("mm:changemodel")
 AddEventHandler("mm:changemodel",function(model)
     changemodel(model,nil)
-    Notify("~r~Model loaded")   
+    Notify("~g~Spieler Geladen")   
 end)
 
 RegisterNetEvent("mm:changempmodel")
 AddEventHandler("mm:changempmodel",function(model)
     changempmodel(model,nil)
     TriggerServerEvent("mm:spawn2")
-    Notify("~r~MP Model loaded")
+    Notify("~g~Spieler Geladen")
 end)
 
 RegisterNetEvent("mm:changemodelspawn")
 AddEventHandler("mm:changemodelspawn",function(model)
     changemodel(model,nil)
-    Notify("~r~Model loaded")
+    Notify("~g~Spieler Geladen")
 end)
 
 RegisterNetEvent("mm:changempmodelspawn")
 AddEventHandler("mm:changempmodelspawn",function(model)
     changempmodel(model,nil)
-    Notify("~r~MP Model loaded")
+    Notify("~g~Spieler Geladen")
     TriggerServerEvent("mm:spawn2")
 end)
 
 RegisterNetEvent("mm:firstspawn")
 AddEventHandler("mm:firstspawn",function()
-    Notify("~g~Change your character at any clothing store!")
+    Notify("~r~Ändere dein aussehen im Laden!")
 end)
 
 RegisterNetEvent("mm:changeeverything_spawn") --Sets mask and texture when spawned
@@ -251,36 +251,36 @@ AddEventHandler("mm:timerend2",function()
 end)
 
 function Main()
-    DisplayHelpText("Use ~INPUT_CELLPHONE_UP~ ~INPUT_CELLPHONE_DOWN~ to ~y~move~w~ and ~y~Enter~w~ to ~r~select")
-    Notify("Press ~r~E ~w~to ~g~open~w~/~r~close~w~!")
-    Notify("~w~Press ~g~F ~w~to ~g~save~w~!")
+    DisplayHelpText("Benutze ~INPUT_CELLPHONE_UP~ ~INPUT_CELLPHONE_DOWN~ zum ~y~Blättern~w~ und ~y~Enter~w~ zum ~r~auswählen")
+    Notify("Drücke ~r~E ~w~zum ~g~Öffnen~w~/~r~Schließen~w~!")
+    Notify("~w~Drücke ~g~F ~w~zum ~g~Speichern~w~!")
     options.menu_title = "Model Menu"
     options.menu_subtitle = "Categories"
     ClearMenu()
-    Menu.addButton("Customisation", "checkCustomisation", nil)
-    Menu.addButton("Male models", "MaleMenu", nil)
-    Menu.addButton("Female Models", "FemaleMenu", nil)
-    Menu.addButton("EMS Models","EMSMenu",nil)
-    Menu.addButton("Animals", "AnimalMenu", nil)
-    Menu.addButton("Others", "OtherMenu", nil)
+    Menu.addButton("Anpassung", "checkCustomisation", nil)
+    Menu.addButton("Männliche", "MaleMenu", nil)
+    Menu.addButton("Weibliche", "FemaleMenu", nil)
+    --Menu.addButton("EMS Models","EMSMenu",nil)
+    --Menu.addButton("Animals", "AnimalMenu", nil)
+    Menu.addButton("Andere", "OtherMenu", nil)
 end
 
 function GCustomisation()
-    DisplayHelpText("Use ~INPUT_CELLPHONE_UP~ ~INPUT_CELLPHONE_DOWN~ to ~y~move~w~ and ~y~Enter~w~ to ~r~select")
-    options.menu_title = "Gender?"
+    DisplayHelpText("Benutze ~INPUT_CELLPHONE_UP~ ~INPUT_CELLPHONE_DOWN~ zum ~y~Blättern~w~ und ~y~Enter~w~ zum ~r~auswählen")
+    options.menu_title = "Geschlecht?"
     options.menu_subtitle = "Categories"
     ClearMenu()
     Menu.selection = 1
     Menu.previous = "Main"
-    Menu.addButton("Male", "Customisation", nil)
-    Menu.addButton("Female", "FCustomisation", nil)
+    Menu.addButton("Männlich", "Customisation", nil)
+    Menu.addButton("Weiblich", "FCustomisation", nil)
 end
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 --Male Menu
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 function MaleMenu()
-    DisplayHelpText("Use ~INPUT_CELLPHONE_UP~ ~INPUT_CELLPHONE_DOWN~ to ~y~move~w~ and ~y~Enter~w~ to ~r~select")
-    options.menu_subtitle = "Male Models"
+    DisplayHelpText("Benutze ~INPUT_CELLPHONE_UP~ ~INPUT_CELLPHONE_DOWN~ zum ~y~Blättern~w~ und ~y~Enter~w~ zum ~r~auswählen")
+    options.menu_subtitle = "Männliche"
     ClearMenu()
     Menu.previous = "Main"
     for i,c in pairs(male_models) do
@@ -292,8 +292,8 @@ end
 --Female Menu
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 function FemaleMenu()
-    DisplayHelpText("Use ~INPUT_CELLPHONE_UP~ ~INPUT_CELLPHONE_DOWN~ to ~y~move~w~ and ~y~Enter~w~ to ~r~select")
-    options.menu_subtitle = "Female Models"
+    DisplayHelpText("Benutze ~INPUT_CELLPHONE_UP~ ~INPUT_CELLPHONE_DOWN~ zum ~y~Blättern~w~ und ~y~Enter~w~ zum ~r~auswählen")
+    options.menu_subtitle = "Weibliche"
     ClearMenu()
     Menu.previous = "Main"
     for i,c in pairs(female_models) do
@@ -304,7 +304,7 @@ end
 --COP/EMS/MARINES/SHERIFF/SECURITY Menu 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 function EMSMenu()
-    DisplayHelpText("Use ~INPUT_CELLPHONE_UP~ ~INPUT_CELLPHONE_DOWN~ to ~y~move~w~ and ~y~Enter~w~ to ~r~select")
+    DisplayHelpText("Benutze ~INPUT_CELLPHONE_UP~ ~INPUT_CELLPHONE_DOWN~ zum ~y~Blättern~w~ und ~y~Enter~w~ zum ~r~auswählen")
     options.menu_subtitle = "EMS"
     ClearMenu()
     Menu.previous = "Main"
@@ -316,7 +316,7 @@ end
 --Animal Menu
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 function AnimalMenu()
-    DisplayHelpText("Use ~INPUT_CELLPHONE_UP~ ~INPUT_CELLPHONE_DOWN~ to ~y~move~w~ and ~y~Enter~w~ to ~r~select")
+    DisplayHelpText("Benutze ~INPUT_CELLPHONE_UP~ ~INPUT_CELLPHONE_DOWN~ zum ~y~Blättern~w~ und ~y~Enter~w~ zum ~r~auswählen")
     options.menu_subtitle = "Animal Models"
     ClearMenu()
     Menu.previous = "Main"
@@ -328,13 +328,13 @@ end
 --Others Menu
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 function OtherMenu()
-    DisplayHelpText("Use ~INPUT_CELLPHONE_UP~ ~INPUT_CELLPHONE_DOWN~ to ~y~move~w~ and ~y~Enter~w~ to ~r~select")
-    options.menu_subtitle = "Other Models"
+    DisplayHelpText("Benutze ~INPUT_CELLPHONE_UP~ ~INPUT_CELLPHONE_DOWN~ zum ~y~Blättern~w~ und ~y~Enter~w~ zum ~r~auswählen")
+    options.menu_subtitle = "Andere"
     ClearMenu()
     Menu.previous = "Main"
-    Menu.addButton("Male","OtherMenuMale",nil)
-    Menu.addButton("Female","OtherMenuFemale",nil)  
-    Menu.addButton("Multiplayer","MPMenu",nil)  
+    Menu.addButton("Männliche","OtherMenuMale",nil)
+    Menu.addButton("Weibliche","OtherMenuFemale",nil)  
+    Menu.addButton("Online","MPMenu",nil)  
     Menu.addButton("Return","Main",nil)
 end
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -342,8 +342,8 @@ end
 --Male
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 function OtherMenuMale()
-    DisplayHelpText("Use ~INPUT_CELLPHONE_UP~ ~INPUT_CELLPHONE_DOWN~ to ~y~move~w~ and ~y~Enter~w~ to ~r~select")
-    options.menu_subtitle = "Other Males"
+    DisplayHelpText("Benutze ~INPUT_CELLPHONE_UP~ ~INPUT_CELLPHONE_DOWN~ zum ~y~Blättern~w~ und ~y~Enter~w~ zum ~r~auswählen")
+    options.menu_subtitle = "Männliche"
     ClearMenu()
     Menu.previous = "OtherMenu"
     for i,c in pairs(other_male_models) do
@@ -355,8 +355,8 @@ end
 --Female
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 function OtherMenuFemale()
-    DisplayHelpText("Use ~INPUT_CELLPHONE_UP~ ~INPUT_CELLPHONE_DOWN~ to ~y~move~w~ and ~y~Enter~w~ to ~r~select")
-    options.menu_subtitle = "Other Females"
+    DisplayHelpText("Benutze ~INPUT_CELLPHONE_UP~ ~INPUT_CELLPHONE_DOWN~ zum ~y~Blättern~w~ und ~y~Enter~w~ zum ~r~auswählen")
+    options.menu_subtitle = "Weibliche"
     ClearMenu()
     Menu.previous = "OtherMenu"
     for i,c in pairs(other_female_models) do
@@ -369,17 +369,17 @@ end
 --Multiplayer Models
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 function MPMenu()
-    DisplayHelpText("Use ~INPUT_CELLPHONE_UP~ ~INPUT_CELLPHONE_DOWN~ to ~y~move~w~ and ~y~Enter~w~ to ~r~select")
-    options.menu_subtitle = "MP Models"
+    DisplayHelpText("Benutze ~INPUT_CELLPHONE_UP~ ~INPUT_CELLPHONE_DOWN~ zum ~y~Blättern~w~ und ~y~Enter~w~ zum ~r~auswählen")
+    options.menu_subtitle = "Online Models"
     ClearMenu()
     Menu.previous = "OtherMenu"
     Menu.addButton(freemode_models[Menu.buttonCount+1], "savempmodel", freemode_models[Menu.buttonCount+1])
     Menu.addButton(freemode_models[Menu.buttonCount+1], "savempmodel", freemode_models[Menu.buttonCount+1])
-    Menu.addButton("More", "MPMenu2", nil)
+    Menu.addButton("Mehr", "MPMenu2", nil)
 end
 function MPMenu2()
-    DisplayHelpText("Use ~INPUT_CELLPHONE_UP~ ~INPUT_CELLPHONE_DOWN~ to ~y~move~w~ and ~y~Enter~w~ to ~r~select")
-    options.menu_subtitle = "MP Models"
+    DisplayHelpText("Benutze ~INPUT_CELLPHONE_UP~ ~INPUT_CELLPHONE_DOWN~ zum ~y~Blättern~w~ und ~y~Enter~w~ zum ~r~auswählen")
+    options.menu_subtitle = "Online Models"
     ClearMenu()
     Menu.previous = "MPMenu"
     for i,c in pairs(mp_models) do
@@ -397,46 +397,46 @@ end
 
 function Accessories()
     texture_help = false
-    options.menu_subtitle = "Male Accessories"
+    options.menu_subtitle = "Männlich Accessories"
     ClearMenu()
     Menu.previous = "Customisation"
-    Menu.addButton("Helmet/Hats", "HelmetMenu")
-    Menu.addButton("Glasses", "GlassesMenu")
-    Menu.addButton("Earrings", "PiercingMenu")
-    Menu.addButton("Masks", "MaskMenu")
-    Menu.addButton("Remove Accessories", "RemoveAccessories")
+    Menu.addButton("Helme/Hüte", "HelmetMenu")
+    Menu.addButton("Brillen", "GlassesMenu")
+    Menu.addButton("Ohrringe", "PiercingMenu")
+    Menu.addButton("Masken", "MaskMenu")
+    Menu.addButton("Abnehmen", "RemoveAccessories")
 end
 
 function FAccessories()
     texture_help = false
-    options.menu_subtitle = "Female Accessories"
+    options.menu_subtitle = "Weiblich Accessories"
     ClearMenu()
     Menu.previous = "FCustomisation"
-    Menu.addButton("Helmet/Hats", "FemaleHelmetMenu")
-    Menu.addButton("Glasses", "FemaleGlassesMenu")
-    Menu.addButton("Earrings", "FemalePiercingMenu")
-    Menu.addButton("Masks", "FMaskMenu")
-    Menu.addButton("Remove Accessories", "FRemoveAccessories")
+    Menu.addButton("Helme/Hüte", "FemaleHelmetMenu")
+    Menu.addButton("Brillen", "FemaleGlassesMenu")
+    Menu.addButton("Ohrringe", "FemalePiercingMenu")
+    Menu.addButton("Masken", "FMaskMenu")
+    Menu.addButton("Abnehmen", "FRemoveAccessories")
 end
 
 function RemoveAccessories()
     options.menu_subtitle = "Accessories"
     ClearMenu()
     Menu.previous = "Accessories"
-    Menu.addButton("Remove hat", "riphat",nil)
-    Menu.addButton("Remove glasses", "ripglasses",nil)
-    Menu.addButton("Remove earrings", "ripearrings",nil)
-    Menu.addButton("Remove mask", "ripmask",nil)
+    Menu.addButton("Nehme Hut ab", "riphat",nil)
+    Menu.addButton("Nehme Brille ab", "ripglasses",nil)
+    Menu.addButton("Nehme Ohrringe ab", "ripearrings",nil)
+    Menu.addButton("Nehme Maske ab", "ripmask",nil)
 end
 
 function FRemoveAccessories()
     options.menu_subtitle = "Accessories"
     ClearMenu()
     Menu.previous = "FAccessories"
-    Menu.addButton("Remove hat", "riphat",nil)
-    Menu.addButton("Remove glasses", "ripglasses",nil)
-    Menu.addButton("Remove earrings", "ripearrings",nil)
-    Menu.addButton("Remove mask", "ripmask",nil)
+    Menu.addButton("Nehme Hut ab", "riphat",nil)
+    Menu.addButton("Nehme Brille ab", "ripglasses",nil)
+    Menu.addButton("Nehme Ohrringe ab", "ripearrings",nil)
+    Menu.addButton("Nehme Maske ab", "ripmask",nil)
 end
 
 function riphat()
@@ -462,7 +462,7 @@ end
 
 function MaskMenu()
     texture_help = true
-    DisplayHelpText("Use ~INPUT_CELLPHONE_UP~ ~INPUT_CELLPHONE_DOWN~ to ~y~move~w~ and ~y~Enter~w~ to ~r~select")
+    DisplayHelpText("Benutze ~INPUT_CELLPHONE_UP~ ~INPUT_CELLPHONE_DOWN~ zum ~y~Blättern~w~ und ~y~Enter~w~ zum ~r~auswählen")
     options.menu_subtitle = "Masks"
     ClearMenu()
     Menu.previous = "Accessories"
@@ -475,7 +475,7 @@ end
 --Textures
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 function maskTextures()
-    DisplayHelpText("Use ~INPUT_CELLPHONE_UP~ ~INPUT_CELLPHONE_DOWN~ to ~y~move~w~ and ~y~Enter~w~ to ~r~select")
+    DisplayHelpText("Benutze ~INPUT_CELLPHONE_UP~ ~INPUT_CELLPHONE_DOWN~ zum ~y~Blättern~w~ und ~y~Enter~w~ zum ~r~auswählen")
     options.menu_subtitle = "Textures"
     ClearMenu()
     Menu.previous = "MaskMenu"
@@ -491,7 +491,7 @@ end
 
 function FMaskMenu()
     texture_help = true
-    DisplayHelpText("Use ~INPUT_CELLPHONE_UP~ ~INPUT_CELLPHONE_DOWN~ to ~y~move~w~ and ~y~Enter~w~ to ~r~select")
+    DisplayHelpText("Benutze ~INPUT_CELLPHONE_UP~ ~INPUT_CELLPHONE_DOWN~ zum ~y~Blättern~w~ und ~y~Enter~w~ zum ~r~auswählen")
     options.menu_subtitle = "Masks"
     ClearMenu()
     Menu.previous = "FAccessories"
@@ -505,7 +505,7 @@ end
 --Textures
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 function fmaskTextures()
-    DisplayHelpText("Use ~INPUT_CELLPHONE_UP~ ~INPUT_CELLPHONE_DOWN~ to ~y~move~w~ and ~y~Enter~w~ to ~r~select")
+    DisplayHelpText("Benutze ~INPUT_CELLPHONE_UP~ ~INPUT_CELLPHONE_DOWN~ zum ~y~Blättern~w~ und ~y~Enter~w~ zum ~r~auswählen")
     options.menu_subtitle = "Textures"
     ClearMenu()
     Menu.previous = "FMaskMenu"
@@ -540,7 +540,7 @@ end
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 function HelmetMenu()
     texture_help = true
-    DisplayHelpText("Use ~INPUT_CELLPHONE_UP~ ~INPUT_CELLPHONE_DOWN~ to ~y~move~w~ and ~y~Enter~w~ to ~r~select")
+    DisplayHelpText("Benutze ~INPUT_CELLPHONE_UP~ ~INPUT_CELLPHONE_DOWN~ zum ~y~Blättern~w~ und ~y~Enter~w~ zum ~r~auswählen")
     options.menu_subtitle = "Helmets"
     ClearMenu()
     Menu.previous = "Accessories"
@@ -555,7 +555,7 @@ end
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 function FemaleHelmetMenu()
     texture_help = true
-    DisplayHelpText("Use ~INPUT_CELLPHONE_UP~ ~INPUT_CELLPHONE_DOWN~ to ~y~move~w~ and ~y~Enter~w~ to ~r~select")
+    DisplayHelpText("Benutze ~INPUT_CELLPHONE_UP~ ~INPUT_CELLPHONE_DOWN~ zum ~y~Blättern~w~ und ~y~Enter~w~ zum ~r~auswählen")
     options.menu_subtitle = "Helmets"
     ClearMenu()
     Menu.previous = "FAccessories"
@@ -569,7 +569,7 @@ end
 --Textures
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 function helmetTextures()
-    DisplayHelpText("Use ~INPUT_CELLPHONE_UP~ ~INPUT_CELLPHONE_DOWN~ to ~y~move~w~ and ~y~Enter~w~ to ~r~select")
+    DisplayHelpText("Benutze ~INPUT_CELLPHONE_UP~ ~INPUT_CELLPHONE_DOWN~ zum ~y~Blättern~w~ und ~y~Enter~w~ zum ~r~auswählen")
     options.menu_subtitle = "Helmet Textures"
     ClearMenu()
     Menu.previous = "HelmetMenu"
@@ -584,7 +584,7 @@ end
 --Female
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 function fhelmetTextures()
-    DisplayHelpText("Use ~INPUT_CELLPHONE_UP~ ~INPUT_CELLPHONE_DOWN~ to ~y~move~w~ and ~y~Enter~w~ to ~r~select")
+    DisplayHelpText("Benutze ~INPUT_CELLPHONE_UP~ ~INPUT_CELLPHONE_DOWN~ zum ~y~Blättern~w~ und ~y~Enter~w~ zum ~r~auswählen")
     options.menu_subtitle = "Helmet Textures"
     ClearMenu()
     Menu.previous = "FemaleHelmetMenu"
@@ -619,8 +619,8 @@ end
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 function GlassesMenu()
     texture_help = true
-    DisplayHelpText("Use ~INPUT_CELLPHONE_UP~ ~INPUT_CELLPHONE_DOWN~ to ~y~move~w~ and ~y~Enter~w~ to ~r~select")
-    options.menu_subtitle = "Glasses"
+    DisplayHelpText("Benutze ~INPUT_CELLPHONE_UP~ ~INPUT_CELLPHONE_DOWN~ zum ~y~Blättern~w~ und ~y~Enter~w~ zum ~r~auswählen")
+    options.menu_subtitle = "Brillen"
     ClearMenu()
     Menu.previous = "Accessories"
     for i,c in pairs(glasses.drawable) do
@@ -634,8 +634,8 @@ end
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 function FemaleGlassesMenu()
     texture_help = true
-    DisplayHelpText("Use ~INPUT_CELLPHONE_UP~ ~INPUT_CELLPHONE_DOWN~ to ~y~move~w~ and ~y~Enter~w~ to ~r~select")
-    options.menu_subtitle = "Glasses"
+    DisplayHelpText("Benutze ~INPUT_CELLPHONE_UP~ ~INPUT_CELLPHONE_DOWN~ zum ~y~Blättern~w~ und ~y~Enter~w~ zum ~r~auswählen")
+    options.menu_subtitle = "Brillen"
     ClearMenu()
     Menu.previous = "FAccessories"
     for i,c in pairs(glasses.fdrawable) do
@@ -649,7 +649,7 @@ end
 --Female
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 function fglassesTextures()
-    DisplayHelpText("Use ~INPUT_CELLPHONE_UP~ ~INPUT_CELLPHONE_DOWN~ to ~y~move~w~ and ~y~Enter~w~ to ~r~select")
+    DisplayHelpText("Benutze ~INPUT_CELLPHONE_UP~ ~INPUT_CELLPHONE_DOWN~ zum ~y~Blättern~w~ und ~y~Enter~w~ zum ~r~auswählen")
     options.menu_subtitle = "Glasses textures"
     ClearMenu()
     Menu.previous = "FemaleGlassesMenu"
@@ -664,7 +664,7 @@ end
 --Male
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 function glassesTextures()
-    DisplayHelpText("Use ~INPUT_CELLPHONE_UP~ ~INPUT_CELLPHONE_DOWN~ to ~y~move~w~ and ~y~Enter~w~ to ~r~select")
+    DisplayHelpText("Benutze ~INPUT_CELLPHONE_UP~ ~INPUT_CELLPHONE_DOWN~ zum ~y~Blättern~w~ und ~y~Enter~w~ zum ~r~auswählen")
     options.menu_subtitle = "Glasses textures"
     ClearMenu()
     Menu.previous = "GlassesMenu"
@@ -699,7 +699,7 @@ end
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 function PiercingMenu()
     texture_help = true
-    DisplayHelpText("Use ~INPUT_CELLPHONE_UP~ ~INPUT_CELLPHONE_DOWN~ to ~y~move~w~ and ~y~Enter~w~ to ~r~select")
+    DisplayHelpText("Benutze ~INPUT_CELLPHONE_UP~ ~INPUT_CELLPHONE_DOWN~ zum ~y~Blättern~w~ und ~y~Enter~w~ zum ~r~auswählen")
     options.menu_subtitle = "Piercing"
     ClearMenu()
     Menu.previous = "Accessories"
@@ -714,7 +714,7 @@ end
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 function FemalePiercingMenu()
     texture_help = true
-    DisplayHelpText("Use ~INPUT_CELLPHONE_UP~ ~INPUT_CELLPHONE_DOWN~ to ~y~move~w~ and ~y~Enter~w~ to ~r~select")
+    DisplayHelpText("Benutze ~INPUT_CELLPHONE_UP~ ~INPUT_CELLPHONE_DOWN~ zum ~y~Blättern~w~ und ~y~Enter~w~ zum ~r~auswählen")
     options.menu_subtitle = "Piercing"
     ClearMenu()
     Menu.previous = "FAccessories"
@@ -749,18 +749,18 @@ function Customisation()
     shirt_help = false
     texture_help = false
     options.menu_title = "Customisation"
-    options.menu_subtitle = "Customise your character"
+    options.menu_subtitle = "Passe deinen Spieler an"
     ClearMenu()
     Menu.previous = "GCustomisation"
     Menu.addButton("Accessories", "Accessories")
-    Menu.addButton("Head", "HeadMenu")
-    Menu.addButton("Hair", "MaleHairMenu")
-    Menu.addButton("Shirt", "ShirtMenu")
-    Menu.addButton("Undershirt", "MaleUndershirtMenu")
-    Menu.addButton("Armour", "MaleArmourMenu")
-    Menu.addButton("Hands", "HandsMenu")
-    Menu.addButton("Pants", "MalePantsMenu")
-    Menu.addButton("Shoes", "MaleShoeMenu")
+    Menu.addButton("Kopf", "HeadMenu")
+    Menu.addButton("Haare", "MaleHairMenu")
+    Menu.addButton("T-Shirt", "ShirtMenu")
+    Menu.addButton("Untershirt", "MaleUndershirtMenu")
+    Menu.addButton("Schutzwesten", "MaleArmourMenu")
+    Menu.addButton("Hände", "HandsMenu")
+    Menu.addButton("Hosen", "MalePantsMenu")
+    Menu.addButton("Schuhe", "MaleShoeMenu")
 end
 
 function FCustomisation()
@@ -771,14 +771,14 @@ function FCustomisation()
     ClearMenu()
     Menu.previous = "GCustomisation"
     Menu.addButton("Accessories", "FAccessories")
-    Menu.addButton("Head", "FemaleHeadMenu")
-    Menu.addButton("Hair", "FemaleHairMenu")
-    Menu.addButton("Shirt", "FemaleShirtMenu")
-    Menu.addButton("Undershirt", "FemaleUndershirtMenu")
-    Menu.addButton("Armour", "FemaleArmourMenu")
-    Menu.addButton("Hands", "FHandsMenu")
-    Menu.addButton("Pants", "FemalePantsMenu")
-    Menu.addButton("Shoes", "FemaleShoeMenu")
+    Menu.addButton("Kopf", "FemaleHeadMenu")
+    Menu.addButton("Haare", "FemaleHairMenu")
+    Menu.addButton("T-Shirt", "FemaleShirtMenu")
+    Menu.addButton("Untershirt", "FemaleUndershirtMenu")
+    Menu.addButton("Schutzwesten", "FemaleArmourMenu")
+    Menu.addButton("Hände", "FHandsMenu")
+    Menu.addButton("Hosen", "FemalePantsMenu")
+    Menu.addButton("Schuhe", "FemaleShoeMenu")
 end
 --Females 34,45,33,21
 --Males 1,12,13,22,42,43,44
@@ -787,8 +787,8 @@ end
 --Head
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 function HeadMenu()
-    DisplayHelpText("Use ~INPUT_CELLPHONE_UP~ ~INPUT_CELLPHONE_DOWN~ to ~y~move~w~ and ~y~Enter~w~ to ~r~select")
-    options.menu_subtitle = "Heads"
+    DisplayHelpText("Benutze ~INPUT_CELLPHONE_UP~ ~INPUT_CELLPHONE_DOWN~ zum ~y~Blättern~w~ und ~y~Enter~w~ zum ~r~auswählen")
+    options.menu_subtitle = "Köpfe"
     ClearMenu()
     Menu.previous = "Customisation"
     for i,c in pairs(heads.drawable) do
@@ -801,8 +801,8 @@ end
 --Female
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 function FemaleHeadMenu()
-    DisplayHelpText("Use ~INPUT_CELLPHONE_UP~ ~INPUT_CELLPHONE_DOWN~ to ~y~move~w~ and ~y~Enter~w~ to ~r~select")
-    options.menu_subtitle = "Heads"
+    DisplayHelpText("Benutze ~INPUT_CELLPHONE_UP~ ~INPUT_CELLPHONE_DOWN~ zum ~y~Blättern~w~ und ~y~Enter~w~ zum ~r~auswählen")
+    options.menu_subtitle = "Köpfe"
     ClearMenu()
     Menu.previous = "FCustomisation"
     for i,c in pairs(heads.fdrawable) do
@@ -826,8 +826,8 @@ end
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 function MaleHairMenu()
     hair_help = false
-    DisplayHelpText("Use ~INPUT_CELLPHONE_UP~ ~INPUT_CELLPHONE_DOWN~ to ~y~move~w~ and ~y~Enter~w~ to ~r~select")
-    options.menu_subtitle = "Hair"
+    DisplayHelpText("Benutze ~INPUT_CELLPHONE_UP~ ~INPUT_CELLPHONE_DOWN~ zum ~y~Blättern~w~ und ~y~Enter~w~ zum ~r~auswählen")
+    options.menu_subtitle = "Haare"
     ClearMenu()
     Menu.previous = "Customisation"
     for i,c in pairs(hair.names) do
@@ -841,8 +841,8 @@ end
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 function FemaleHairMenu()
     hair_help = false
-    DisplayHelpText("Use ~INPUT_CELLPHONE_UP~ ~INPUT_CELLPHONE_DOWN~ to ~y~move~w~ and ~y~Enter~w~ to ~r~select")
-    options.menu_subtitle = "Hair"
+    DisplayHelpText("Benutze ~INPUT_CELLPHONE_UP~ ~INPUT_CELLPHONE_DOWN~ zum ~y~Blättern~w~ und ~y~Enter~w~ zum ~r~auswählen")
+    options.menu_subtitle = "Haare"
     ClearMenu()
     Menu.previous = "FCustomisation"
     for i,c in pairs(hair.hair) do
@@ -856,8 +856,8 @@ end
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 function HairColour()
     hair_help = true
-    DisplayHelpText("Use ~INPUT_CELLPHONE_UP~ ~INPUT_CELLPHONE_DOWN~ to ~y~move~w~ and ~y~Enter~w~ to ~r~select")
-    options.menu_subtitle = "Hair Colour"
+    DisplayHelpText("Benutze ~INPUT_CELLPHONE_UP~ ~INPUT_CELLPHONE_DOWN~ zum ~y~Blättern~w~ und ~y~Enter~w~ zum ~r~auswählen")
+    options.menu_subtitle = "Haar Farben"
     ClearMenu()
     Menu.previous = "MaleHairMenu"
     for i,c in pairs(hair.hcolour) do
@@ -871,8 +871,8 @@ end
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 function fHairColour()
     hair_help = true
-    DisplayHelpText("Use ~INPUT_CELLPHONE_UP~ ~INPUT_CELLPHONE_DOWN~ to ~y~move~w~ and ~y~Enter~w~ to ~r~select")
-    options.menu_subtitle = "Hair Colour"
+    DisplayHelpText("Benutze ~INPUT_CELLPHONE_UP~ ~INPUT_CELLPHONE_DOWN~ zum ~y~Blättern~w~ und ~y~Enter~w~ zum ~r~auswählen")
+    options.menu_subtitle = "Haar Farben"
     ClearMenu()
     Menu.previous = "FemaleHairMenu"
     for i,c in pairs(hair.hcolour) do
@@ -911,8 +911,8 @@ end
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 function ShirtMenu()
     shirt_help = true
-    DisplayHelpText("Use ~INPUT_CELLPHONE_UP~ ~INPUT_CELLPHONE_DOWN~ to ~y~move~w~ and ~y~Enter~w~ to ~r~select")
-    options.menu_subtitle = "Shirts"
+    DisplayHelpText("Benutze ~INPUT_CELLPHONE_UP~ ~INPUT_CELLPHONE_DOWN~ zum ~y~Blättern~w~ und ~y~Enter~w~ zum ~r~auswählen")
+    options.menu_subtitle = "T-Shirts"
     ClearMenu()
     Menu.previous = "Customisation"
     for i,c in pairs(shirts.shirts) do
@@ -925,8 +925,8 @@ end
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 function FemaleShirtMenu()
     shirt_help = true
-    DisplayHelpText("Use ~INPUT_CELLPHONE_UP~ ~INPUT_CELLPHONE_DOWN~ to ~y~move~w~ and ~y~Enter~w~ to ~r~select")
-    options.menu_subtitle = "Shirts"
+    DisplayHelpText("Benutze ~INPUT_CELLPHONE_UP~ ~INPUT_CELLPHONE_DOWN~ zum ~y~Blättern~w~ und ~y~Enter~w~ zum ~r~auswählen")
+    options.menu_subtitle = "T-Shirts"
     ClearMenu()
     Menu.previous = "FCustomisation"
     for i,c in pairs(fshirts.shirts) do
@@ -939,8 +939,8 @@ end
 --Textures                      
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 function fshirtTextures()
-    DisplayHelpText("Use ~INPUT_CELLPHONE_UP~ ~INPUT_CELLPHONE_DOWN~ to ~y~move~w~ and ~y~Enter~w~ to ~r~select")
-    options.menu_subtitle = "Textures"
+    DisplayHelpText("Benutze ~INPUT_CELLPHONE_UP~ ~INPUT_CELLPHONE_DOWN~ zum ~y~Blättern~w~ und ~y~Enter~w~ zum ~r~auswählen")
+    options.menu_subtitle = "Farben"
     ClearMenu()
     Menu.previous = "FemaleShirtMenu"
     for i,c in pairs(shirts.txt) do
@@ -953,8 +953,8 @@ end
 --Textures                    
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 function shirtTextures()
-    DisplayHelpText("Use ~INPUT_CELLPHONE_UP~ ~INPUT_CELLPHONE_DOWN~ to ~y~move~w~ and ~y~Enter~w~ to ~r~select")
-    options.menu_subtitle = "Textures"
+    DisplayHelpText("Benutze ~INPUT_CELLPHONE_UP~ ~INPUT_CELLPHONE_DOWN~ zum ~y~Blättern~w~ und ~y~Enter~w~ zum ~r~auswählen")
+    options.menu_subtitle = "Farben"
     ClearMenu()
     Menu.previous = "ShirtMenu"
     for i,c in pairs(shirts.txt) do
@@ -994,8 +994,8 @@ end
 --Hands
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 function HandsMenu()
-    DisplayHelpText("Use ~INPUT_CELLPHONE_UP~ ~INPUT_CELLPHONE_DOWN~ to ~y~move~w~ and ~y~Enter~w~ to ~r~select")
-    options.menu_subtitle = "Hands"
+    DisplayHelpText("Benutze ~INPUT_CELLPHONE_UP~ ~INPUT_CELLPHONE_DOWN~ zum ~y~Blättern~w~ und ~y~Enter~w~ zum ~r~auswählen")
+    options.menu_subtitle = "Hände"
     ClearMenu()
     Menu.previous = "Customisation"
     for i,c in pairs(hands.hands) do
@@ -1007,8 +1007,8 @@ end
 --Hands Female
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 function FHandsMenu()
-    DisplayHelpText("Use ~INPUT_CELLPHONE_UP~ ~INPUT_CELLPHONE_DOWN~ to ~y~move~w~ and ~y~Enter~w~ to ~r~select")
-    options.menu_subtitle = "Hands"
+    DisplayHelpText("Benutze ~INPUT_CELLPHONE_UP~ ~INPUT_CELLPHONE_DOWN~ zum ~y~Blättern~w~ und ~y~Enter~w~ zum ~r~auswählen")
+    options.menu_subtitle = "Hände"
     ClearMenu()
     Menu.previous = "FCustomisation"
     for i,c in pairs(hands.hands) do
@@ -1029,8 +1029,8 @@ end
 --Male Shoes
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 function MaleShoeMenu()
-    DisplayHelpText("Use ~INPUT_CELLPHONE_UP~ ~INPUT_CELLPHONE_DOWN~ to ~y~move~w~ and ~y~Enter~w~ to ~r~select")
-    options.menu_subtitle = "Shoes"
+    DisplayHelpText("Benutze ~INPUT_CELLPHONE_UP~ ~INPUT_CELLPHONE_DOWN~ zum ~y~Blättern~w~ und ~y~Enter~w~ zum ~r~auswählen")
+    options.menu_subtitle = "Schuhe"
     ClearMenu()
     Menu.previous = "Customisation"
     for i,c in pairs(shoes.shoes) do
@@ -1042,8 +1042,8 @@ end
 --Female Shoes
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 function FemaleShoeMenu()
-    DisplayHelpText("Use ~INPUT_CELLPHONE_UP~ ~INPUT_CELLPHONE_DOWN~ to ~y~move~w~ and ~y~Enter~w~ to ~r~select")
-    options.menu_subtitle = "Shoes"
+    DisplayHelpText("Benutze ~INPUT_CELLPHONE_UP~ ~INPUT_CELLPHONE_DOWN~ zum ~y~Blättern~w~ und ~y~Enter~w~ zum ~r~auswählen")
+    options.menu_subtitle = "Schuhe"
     ClearMenu()
     Menu.previous = "FCustomisation"
     for i,c in pairs(shoes.fshoes) do
@@ -1056,8 +1056,8 @@ end
 --Textures                     
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 function fshoeTextures()
-    DisplayHelpText("Use ~INPUT_CELLPHONE_UP~ ~INPUT_CELLPHONE_DOWN~ to ~y~move~w~ and ~y~Enter~w~ to ~r~select")
-    options.menu_subtitle = "Textures"
+    DisplayHelpText("Benutze ~INPUT_CELLPHONE_UP~ ~INPUT_CELLPHONE_DOWN~ zum ~y~Blättern~w~ und ~y~Enter~w~ zum ~r~auswählen")
+    options.menu_subtitle = "Farben"
     ClearMenu()
     Menu.previous = "FemaleShoeMenu"
     for i,c in pairs(shoes.txt) do
@@ -1070,8 +1070,8 @@ end
 --Textures                      
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 function shoeTextures()
-    DisplayHelpText("Use ~INPUT_CELLPHONE_UP~ ~INPUT_CELLPHONE_DOWN~ to ~y~move~w~ and ~y~Enter~w~ to ~r~select")
-    options.menu_subtitle = "Textures"
+    DisplayHelpText("Benutze ~INPUT_CELLPHONE_UP~ ~INPUT_CELLPHONE_DOWN~ zum ~y~Blättern~w~ und ~y~Enter~w~ zum ~r~auswählen")
+    options.menu_subtitle = "Farben"
     ClearMenu()
     Menu.previous = "MaleShoeMenu"
     for i,c in pairs(shoes.txt) do
@@ -1109,8 +1109,8 @@ end
 --Male                      
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 function MalePantsMenu()
-    DisplayHelpText("Use ~INPUT_CELLPHONE_UP~ ~INPUT_CELLPHONE_DOWN~ to ~y~move~w~ and ~y~Enter~w~ to ~r~select")
-    options.menu_subtitle = "Pants"
+    DisplayHelpText("Benutze ~INPUT_CELLPHONE_UP~ ~INPUT_CELLPHONE_DOWN~ zum ~y~Blättern~w~ und ~y~Enter~w~ zum ~r~auswählen")
+    options.menu_subtitle = "Hosen"
     ClearMenu()
     Menu.previous = "Customisation"
     for i,c in pairs(pants.pants) do
@@ -1123,8 +1123,8 @@ end
 --Female                     
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 function FemalePantsMenu()
-    DisplayHelpText("Use ~INPUT_CELLPHONE_UP~ ~INPUT_CELLPHONE_DOWN~ to ~y~move~w~ and ~y~Enter~w~ to ~r~select")
-    options.menu_subtitle = "Pants"
+    DisplayHelpText("Benutze ~INPUT_CELLPHONE_UP~ ~INPUT_CELLPHONE_DOWN~ zum ~y~Blättern~w~ und ~y~Enter~w~ zum ~r~auswählen")
+    options.menu_subtitle = "Hosen"
     ClearMenu()
     Menu.previous = "FCustomisation"
     for i,c in pairs(pants.fpants) do
@@ -1137,8 +1137,8 @@ end
 --Textures                      Page 1/3
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 function fpantsTextures()
-    DisplayHelpText("Use ~INPUT_CELLPHONE_UP~ ~INPUT_CELLPHONE_DOWN~ to ~y~move~w~ and ~y~Enter~w~ to ~r~select")
-    options.menu_subtitle = "Textures"
+    DisplayHelpText("Benutze ~INPUT_CELLPHONE_UP~ ~INPUT_CELLPHONE_DOWN~ zum ~y~Blättern~w~ und ~y~Enter~w~ zum ~r~auswählen")
+    options.menu_subtitle = "Farben"
     ClearMenu()
     Menu.previous = "FemalePantsMenu"
     for i,c in pairs(pants.txt) do
@@ -1151,8 +1151,8 @@ end
 --Textures                      Page 1/3
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 function pantsTextures()
-    DisplayHelpText("Use ~INPUT_CELLPHONE_UP~ ~INPUT_CELLPHONE_DOWN~ to ~y~move~w~ and ~y~Enter~w~ to ~r~select")
-    options.menu_subtitle = "Textures"
+    DisplayHelpText("Benutze ~INPUT_CELLPHONE_UP~ ~INPUT_CELLPHONE_DOWN~ zum ~y~Blättern~w~ und ~y~Enter~w~ zum ~r~auswählen")
+    options.menu_subtitle = "Farben"
     ClearMenu()
     Menu.previous = "MalePantsMenu"
     for i,c in pairs(pants.txt) do
@@ -1191,8 +1191,8 @@ end
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 function MaleUndershirtMenu()
     shirt_help = true
-    DisplayHelpText("Use ~INPUT_CELLPHONE_UP~ ~INPUT_CELLPHONE_DOWN~ to ~y~move~w~ and ~y~Enter~w~ to ~r~select")
-    options.menu_subtitle = "Undershirts"
+    DisplayHelpText("Benutze ~INPUT_CELLPHONE_UP~ ~INPUT_CELLPHONE_DOWN~ zum ~y~Blättern~w~ und ~y~Enter~w~ zum ~r~auswählen")
+    options.menu_subtitle = "Untershirt"
     ClearMenu()
     Menu.previous = "Customisation"
     Menu.addButton("Remove Undershirt", "RemoveUnderShirt", nil)
@@ -1207,8 +1207,8 @@ end
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 function FemaleUndershirtMenu()
     shirt_help = true
-    DisplayHelpText("Use ~INPUT_CELLPHONE_UP~ ~INPUT_CELLPHONE_DOWN~ to ~y~move~w~ and ~y~Enter~w~ to ~r~select")
-    options.menu_subtitle = "Undershirts"
+    DisplayHelpText("Benutze ~INPUT_CELLPHONE_UP~ ~INPUT_CELLPHONE_DOWN~ zum ~y~Blättern~w~ und ~y~Enter~w~ zum ~r~auswählen")
+    options.menu_subtitle = "Untershirt"
     ClearMenu()
     Menu.previous = "FCustomisation"
     Menu.addButton("Remove Undershirt", "RemoveUnderShirt", nil)
@@ -1222,8 +1222,8 @@ end
 --Textures                      
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 function fundershirtTextures()
-    DisplayHelpText("Use ~INPUT_CELLPHONE_UP~ ~INPUT_CELLPHONE_DOWN~ to ~y~move~w~ and ~y~Enter~w~ to ~r~select")
-    options.menu_subtitle = "Textures"
+    DisplayHelpText("Benutze ~INPUT_CELLPHONE_UP~ ~INPUT_CELLPHONE_DOWN~ zum ~y~Blättern~w~ und ~y~Enter~w~ zum ~r~auswählen")
+    options.menu_subtitle = "Farben"
     ClearMenu()
     Menu.previous = "FemaleUndershirtMenu"
     for i,c in pairs(undershirt.txt) do
@@ -1236,8 +1236,8 @@ end
 --Textures                      
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 function undershirtTextures()
-    DisplayHelpText("Use ~INPUT_CELLPHONE_UP~ ~INPUT_CELLPHONE_DOWN~ to ~y~move~w~ and ~y~Enter~w~ to ~r~select")
-    options.menu_subtitle = "Textures"
+    DisplayHelpText("Benutze ~INPUT_CELLPHONE_UP~ ~INPUT_CELLPHONE_DOWN~ zum ~y~Blättern~w~ und ~y~Enter~w~ zum ~r~auswählen")
+    options.menu_subtitle = "Farben"
     ClearMenu()
     Menu.previous = "MaleUndershirtMenu"
     for i,c in pairs(undershirt.txt) do
@@ -1281,8 +1281,8 @@ end
 --Male
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 function MaleArmourMenu()
-    DisplayHelpText("Use ~INPUT_CELLPHONE_UP~ ~INPUT_CELLPHONE_DOWN~ to ~y~move~w~ and ~y~Enter~w~ to ~r~select")
-    options.menu_subtitle = "Armour"
+    DisplayHelpText("Benutze ~INPUT_CELLPHONE_UP~ ~INPUT_CELLPHONE_DOWN~ zum ~y~Blättern~w~ und ~y~Enter~w~ zum ~r~auswählen")
+    options.menu_subtitle = "Schutzwesten"
     ClearMenu()
     Menu.previous = "Customisation"
     Menu.addButton(armour.m_name[Menu.buttonCount+1], "removearmour", armour.m_armour[Menu.buttonCount+1])
@@ -1294,8 +1294,8 @@ end
 --Female
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 function FemaleArmourMenu()
-    DisplayHelpText("Use ~INPUT_CELLPHONE_UP~ ~INPUT_CELLPHONE_DOWN~ to ~y~move~w~ and ~y~Enter~w~ to ~r~select")
-    options.menu_subtitle = "Armour"
+    DisplayHelpText("Benutze ~INPUT_CELLPHONE_UP~ ~INPUT_CELLPHONE_DOWN~ zum ~y~Blättern~w~ und ~y~Enter~w~ zum ~r~auswählen")
+    options.menu_subtitle = "Schutzwesten"
     ClearMenu()
     Menu.previous = "FCustomisation"
     Menu.addButton(armour.f_name[Menu.buttonCount+1], "removearmour", armour.f_armour[Menu.buttonCount+1])
@@ -1307,7 +1307,7 @@ end
 --Textures
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 function armourTextures()
-    DisplayHelpText("Use ~INPUT_CELLPHONE_UP~ ~INPUT_CELLPHONE_DOWN~ to ~y~move~w~ and ~y~Enter~w~ to ~r~select")
+    DisplayHelpText("Benutze ~INPUT_CELLPHONE_UP~ ~INPUT_CELLPHONE_DOWN~ zum ~y~Blättern~w~ und ~y~Enter~w~ zum ~r~auswählen")
     options.menu_subtitle = "Armour Camos"
     ClearMenu()
     Menu.previous = "MaleArmourMenu"
@@ -1323,7 +1323,7 @@ end
 --Textures
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 function farmourTextures()
-    DisplayHelpText("Use ~INPUT_CELLPHONE_UP~ ~INPUT_CELLPHONE_DOWN~ to ~y~move~w~ and ~y~Enter~w~ to ~r~select")
+    DisplayHelpText("Benutze ~INPUT_CELLPHONE_UP~ ~INPUT_CELLPHONE_DOWN~ zum ~y~Blättern~w~ und ~y~Enter~w~ zum ~r~auswählen")
     options.menu_subtitle = "Armour Camos"
     ClearMenu()
     Menu.previous = "FemaleArmourMenu"
@@ -1368,14 +1368,19 @@ end
 --Press E to open/close menu in the red marker
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 local emplacement = {
-    {name="Clothing Store", id=73, x=1932.76989746094, y=3727.73510742188, z=32.8444557189941},
-    {name="Clothing Store", id=73, x=1693.26, y=4822.27, z=42.06},
-    {name="Clothing Store", id=73, x=125.83, y=-223.16, z=54.55},
-    {name="Clothing Store", id=73, x=-710.16, y=-153.26, z=37.41},
-    {name="Clothing Store", id=73, x=-821.69, y=-1073.90, z=11.32},
-    {name="Clothing Store", id=73, x=-1192.81, y=-768.24, z=17.31},
-    {name="Clothing Store", id=73, x=4.25, y=6512.88, z=31.87},
-    {name="Clothing Store", id=73, x=425.471, y=-806.164, z=29.4911},
+    {name="Kleidungs Laden", id=73, x=1932.76989746094, y=3727.73510742188, z=32.8444557189941},
+    {name="Kleidungs Laden", id=73, x=1693.26, y=4822.27, z=42.06},
+    {name="Kleidungs Laden", id=73, x=125.83, y=-223.16, z=54.55},
+    {name="Kleidungs Laden", id=73, x=-710.16, y=-153.26, z=37.41},
+    {name="Kleidungs Laden", id=73, x=-821.69, y=-1073.90, z=11.32},
+    {name="Kleidungs Laden", id=73, x=-1192.81, y=-768.24, z=17.31},
+    {name="Kleidungs Laden", id=73, x=4.25, y=6512.88, z=31.87},
+    {name="Kleidungs Laden", id=73, x=425.471, y=-806.164, z=29.4911},
+	{name="Kleidungs Laden", id=73, x=-1100.8930664063, y=2710.3825683594, z=18.207870101929},
+	{name="Kleidungs Laden", id=73, x=614.49359130859, y=2762.8823242188, z=42.088130950928},
+	{name="Kleidungs Laden", id=73, x=1196.5007324219, y=2710.0922851563, z=38.222621917725},
+	{name="Kleidungs Laden", id=73, x=75.43815612793, y=-1392.9052734375, z=29.376152038574},
+	{name="Kleidungs Laden", id=73, x=-3170.8498535156, y=1044.1860351563, z=20.863218307495},
 }
 incircle = false
 Citizen.CreateThread(function()
@@ -1396,7 +1401,7 @@ Citizen.CreateThread(function()
                 DrawMarker(1, v.x, v.y, v.z - 1, 0, 0, 0, 0, 0, 0, 1.0001, 1.0001, 1.5001, 1555, 0, 0,165, 0, 0, 0,0)
                 if(Vdist(pos.x, pos.y, pos.z, v.x, v.y, v.z) < 1.0)then
                     if (incircle == false) then
-                        DisplayHelpText("Press ~INPUT_CONTEXT~ to customise your character.")
+                        DisplayHelpText("Drücke ~INPUT_CONTEXT~ um dein Spieler anzupassen.")
                     end
                     incircle = true
                     if IsControlJustReleased(1, 51) then -- INPUT_CELLPHONE_DOWN
@@ -1434,7 +1439,7 @@ Citizen.CreateThread(function()
                                 piercing = c_options.piercing,
                                 piercing_txt = c_options.piercing_txt
                             }
-                            Notify("~g~You saved your outfit.") 
+                            Notify("~g~Spieler Gespeichert.") 
                             TriggerServerEvent("mm:saveeverything", user)
                         else
                             secondsRemaining2 = 10
@@ -1462,27 +1467,27 @@ end)
 Citizen.CreateThread(function()
     while true do
         if shirt_help then
-            drawTxt(0.66, 1.45, 1.0,1.0,0.4, "~r~NOTICE~w~: If your characters hands or arms are invisible then go to the ~r~Hands ~w~menu.", 255, 255, 255, 255)
-            drawTxt(0.66, 1.42, 1.0,1.0,0.4, "~r~NOTICE~w~: If your characters chest is invisible then go to the ~r~Under Shirt ~w~menu.", 255, 255, 255, 255)
-            drawTxt(0.66, 1.37, 1.0,1.0,0.4, "~r~NOTICE~w~: If your characters body or arms are going through clothing then go to the ~r~Hands", 255, 255, 255, 255)
-            drawTxt(0.66, 1.39, 1.0,1.0,0.4, "              ~w~menu.", 255, 255, 255, 255)
-            drawTxt(0.66, 1.34, 1.0,1.0,0.4, "~r~NOTICE~w~: (~g~Number~w~) = the number of ~g~Textures ~w~available.", 255, 255, 255, 255)
-            drawTxt(0.66, 1.31, 1.0,1.0,0.4, "~r~NOTICE~w~: ~g~T~w~ = ~g~Textures ~w~and the numbers are textures that work with the clothing.", 255, 255, 255, 255)
+            drawTxt(0.66, 1.45, 1.0,1.0,0.4, "~r~INFO~w~: Wenn deine Charaktere Hände oder Arme unsichtbar sind, dann geh zum ~r~Hands ~w~menü.", 255, 255, 255, 255)
+            drawTxt(0.66, 1.42, 1.0,1.0,0.4, "~r~INFO~w~: Wenn deine Charaktere Brust unsichtbar ist, dann geh zum ~r~Untershirt ~w~menü.", 255, 255, 255, 255)
+            drawTxt(0.66, 1.37, 1.0,1.0,0.4, "~r~INFO~w~: Wenn deine Charaktere Körper oder Arme durch Kleidung gehen dann gehen auf die ~r~Hände", 255, 255, 255, 255)
+            drawTxt(0.66, 1.39, 1.0,1.0,0.4, "              ~w~menü.", 255, 255, 255, 255)
+            drawTxt(0.66, 1.34, 1.0,1.0,0.4, "~r~INFO~w~: (~g~Number~w~) = the number of ~g~Textures ~w~available.", 255, 255, 255, 255)
+            drawTxt(0.66, 1.31, 1.0,1.0,0.4, "~r~INFO~w~: ~g~T~w~ = ~g~Textures ~w~aUnd die Zahlen sind Texturen, die mit der Kleidung arbeiten.", 255, 255, 255, 255)
         end
         if model_info then
-            drawTxt(0.66, 1.41, 1.0,1.0,0.4, "(~g~" .. secondsRemaining .. "~w~) ~r~NOTICE~w~: Your current player model cannot be customised.", 255, 255, 255, 255)
-            drawTxt(0.66, 1.44, 1.0,1.0,0.4, "(~g~" .. secondsRemaining .. "~w~) ~r~NOTICE~w~: Your model must be ~r~mp_m_freemode_01 ~w~or ~r~mp_f_freemode_01~w~.", 255, 255, 255, 255)
+            drawTxt(0.66, 1.41, 1.0,1.0,0.4, "(~g~" .. secondsRemaining .. "~w~) ~r~INFO~w~: Fertige Spieler können nicht Angepasst werden.", 255, 255, 255, 255)
+            drawTxt(0.66, 1.44, 1.0,1.0,0.4, "(~g~" .. secondsRemaining .. "~w~) ~r~INFO~w~: Du musst das Model ~r~mp_m_freemode_01 ~w~oder ~r~mp_f_freemode_01~w~ nutzen.", 255, 255, 255, 255)
         end
         if mp_check_message then
-            drawTxt(0.66, 1.38, 1.0,1.0,0.4, "(~g~" .. secondsRemaining2 .. "~w~) ~r~NOTICE~w~: You cannot save your outfit as your model isn't customisable.", 255, 255, 255, 255)
+            drawTxt(0.66, 1.38, 1.0,1.0,0.4, "(~g~" .. secondsRemaining2 .. "~w~) ~r~INFO~w~: Du kannst keine Fertigen Modelle Speichern.", 255, 255, 255, 255)
         end
         if texture_help then
-            drawTxt(0.66, 1.45, 1.0,1.0,0.4, "~r~NOTICE~w~: (~g~Number~w~) = the number of ~g~Textures ~w~available.", 255, 255, 255, 255)
-            drawTxt(0.66, 1.42, 1.0,1.0,0.4, "~r~NOTICE~w~: ~g~T~w~ = ~g~Textures ~w~and the numbers are textures that work with the clothing.", 255, 255, 255, 255)
+            drawTxt(0.66, 1.45, 1.0,1.0,0.4, "~r~INFO~w~: (~g~Nummer~w~) = die Nummer von ~g~Textures ~w~Verfügbar.", 255, 255, 255, 255)
+            drawTxt(0.66, 1.42, 1.0,1.0,0.4, "~r~INFO~w~: ~g~T~w~ = ~g~Textur ~w~Und die Zahlen sind Texturen, die mit der Kleidung arbeiten.", 255, 255, 255, 255)
         end
         if hair_help then
-            drawTxt(0.66, 1.45, 1.0,1.0,0.4, "~r~NOTICE~w~: [ ~r~- ~w~] is dark and [ ~g~+ ~w~] is light.", 255, 255, 255, 255)
-            drawTxt(0.66, 1.42, 1.0,1.0,0.4, "~r~NOTICE~w~: Hair colours go from Dark to Light.", 255, 255, 255, 255)
+            drawTxt(0.66, 1.45, 1.0,1.0,0.4, "~r~INFO~w~: [ ~r~- ~w~] ist Dunkel und [ ~g~+ ~w~] Hell.", 255, 255, 255, 255)
+            drawTxt(0.66, 1.42, 1.0,1.0,0.4, "~r~INFO~w~: Haar Farbe von Dunkel zu Hell.", 255, 255, 255, 255)
         end
         if not Menu.hidden then
             drawTxt(0.65, 0.76, 1.0,1.0,0.4, Menu.selection.."/"..Menu.buttonCount, 255, 255, 255, 255, true)
