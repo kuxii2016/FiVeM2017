@@ -60,6 +60,7 @@ local vehiclesshop = {
 				{name = "Panto", costs = 85000, description = {}, model = "panto"},
 				{name = "Prairie", costs = 30000, description = {}, model = "prairie"},
 				{name = "Rhapsody", costs = 120000, description = {}, model = "rhapsody"},
+				{name = "Schrottkiste", costs = 150, description = {}, model = "ruiner3"},
 			}
 		},
 		["coupes"] = {
@@ -120,6 +121,9 @@ local vehiclesshop = {
 				{name = "Surano", costs = 11000, description = {}, model = "surano"},
 				{name = "Tropos", costs = 81600, description = {}, model = "tropos"},
 				{name = "Verkierer", costs = 69500, description = {}, model = "verlierer2"},
+				{name = "Porsche", costs = 69500, description = {}, model = "comet3"},
+				{name = "Ferari", costs = 69500, description = {}, model = "ardent"},
+				{name = "Ferari", costs = 69500, description = {}, model = "cheetah2"},
 			}
 		},
 		["sportsclassics"] = {
